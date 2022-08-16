@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+    <title>下環巡禮</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta name="viewport" id="viewport" http-equiv="Content-Type" content="initial-scale=1.0,width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,text/html,charset=utf-8"/>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- CSS Global Compulsory-->
+    <link rel="stylesheet" href="__HOME_PUBLIC__plugins/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="__HOME_PUBLIC__css/style.css" />
+    <link rel="stylesheet" href="__HOME_PUBLIC__css/headers/header1.css" />
+    <link rel="stylesheet" href="__HOME_PUBLIC__plugins/bootstrap/css/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" href="__HOME_PUBLIC__css/style_responsive.css" />
+    <link rel="stylesheet" href="__HOME_PUBLIC__css/iconfont.css" />
+    <link rel="shortcut icon" href="/xiahuan/favicon.ico" />
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="__HOME_PUBLIC__plugins/revolution_slider/css/rs-style.css" media="screen" />
+    <link rel="stylesheet" href="__HOME_PUBLIC__plugins/revolution_slider/rs-plugin/css/settings.css" media="screen" />
+    <link rel="stylesheet" href="__HOME_PUBLIC__plugins/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="__HOME_PUBLIC__plugins/flexslider/flexslider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="__HOME_PUBLIC__plugins/parallax-slider/css/parallax-slider.css" type="text/css" />
+    <link rel="stylesheet" href="__HOME_PUBLIC__plugins/bxslider/jquery.bxslider.css" />
+    <link rel="stylesheet" href="__HOME_PUBLIC__plugins/swiper/swiper-4.4.1.min.css" />
+    <link rel="stylesheet" href="__HOME_PUBLIC__plugins/portfolioSorting/css/sorting.css" />
+    <!-- CSS Theme -->
+    <link rel="stylesheet" href="__HOME_PUBLIC__css/themes/default.css" id="style_color" />
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/TrafficControl/1.4/src/TrafficControl_min.css"/>
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
+    <style>
+        
+        
+
+        @media (min-width: 979px){
+            .search-open{
+                top: 155px!important;
+            }
+        /* 下拉按钮样式 */
+        .dropbtn {
+            
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            /* border: none; */
+            cursor: pointer;
+        }
+        
+        /* 容器 <div> - 需要定位下拉内容 */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        /* 下拉内容 (默认隐藏) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        
+        /* 下拉菜单的链接 */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        /* 鼠标移上去后修改下拉菜单链接颜色 */
+        .dropdown-content a:hover {background-color: #f1f1f1}
+        
+        /* 在鼠标移上去后显示下拉菜单 */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        /* 当下拉内容显示后修改下拉按钮的背景颜色 */
+        .hhhh{
+            margin-top: 20px;
+            border: solid 2px transparent;
+            /* border-radius: 15px !important; */
+            background: none;
+            display: block;
+            font-size: 18px;
+            font-weight: 400;
+            color: #687074;
+            text-shadow: none;
+            padding: 0px 20px;
+            text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
+            -webkit-transition: all 0.4s ease-in-out;
+            -moz-transition: all 0.4s ease-in-out;
+            -o-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out;
+        }
+        .hhhh:hover{
+            color: #385A9F;
+            padding-bottom: 10px;
+            border-bottom: solid 2px #385A9F;
+            /* border-radius: 15px !important; */
+        }
+        }
+        .navthub{
+            position: relative;
+            display: block;
+            float: left;
+            padding-top: 70px;
+        }
+        .navlogo{
+            position: absolute;
+            width: 23%;
+            display: flex;
+            flex-direction: initial;
+        }
+        @media screen and (min-width: 1400px) {
+            .navthub{
+                left: 17% !important;
+
+            }
+            .navlogo{
+                left: -6%;
+            }
+        }
+        @media screen and (min-width: 1200px) and (max-width: 1399px){
+            .navthub{
+                left: 6% !important;
+            }
+            .navlogo{
+                left: auto;
+                width: 20%;
+            }
+        }
+        @media screen and (min-width: 1050px) and (max-width: 1199px){
+            .navthub{
+                left: 13% !important;
+            }
+            .navlogo{
+                left: -6%;
+                width: 18%;
+            }
+        }
+        @media screen and (min-width: 980px) and (max-width: 1049px){
+            .navthub{
+                left: 6% !important;
+            }
+            .navlogo{
+                left: 1%;
+                z-index: 9;
+                width: 11%;
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width: 979px){
+            .navlogo{
+                left: 1%;
+                z-index: 9;
+                width: 11%;
+            }
+        }
+        @media screen and (max-width: 767px){
+            .navlogo{
+                z-index: 9;
+                width: 160px;
+            }
+        }
+        </style>
+</head>
+
+<body>
+    <div class="fiexd_code">
+        <!-- <img src="__HOME_PUBLIC__img/code.png"> -->
+    </div>
+    <!--=== Style Switcher ===-->
+    <!-- <i class="style-switcher-btn icon-cogs"></i>
+    <div class="style-switcher">
+        <div class="theme-close">
+            <i class="icon-remove"></i>
+        </div>
+        <div class="theme-heading">Theme Colors</div>
+        <ul class="unstyled">
+            <li class="theme-default theme-active" data-style="default" data-header="light"></li>
+            <li class="theme-blue" data-style="blue" data-header="light"></li>
+            <li class="theme-orange" data-style="orange" data-header="light"></li>
+            <li class="theme-red" data-style="red" data-header="light"></li>
+            <li class="theme-light" data-style="light" data-header="light"></li>
+        </ul>
+    </div> -->
+    <!--/style-switcher-->
+    <!--=== End Style Switcher ===-->
+
+    <!--=== Top ===-->
+    <div class="top">
+        <!-- <div class="container">
+            <ul class="loginbar pull-right">
+                <li>
+                    <i class="icon-globe"></i>
+                    <a>語言
+                        <i class="icon-sort-up"></i>
+                    </a>
+                    <ul class="nav-list">
+                        <li class="active">
+                            <a href="#">繁體</a>
+                            <i class="icon-ok"></i>
+                        </li>
+                        <li>
+                            <a href="#">簡體</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li class="devider">&nbsp;</li>
+                <li>
+                    <a href="page_faq.html" class="login-btn">幫助</a>
+                </li>
+                <li class="devider">&nbsp;</li>
+                <li>
+                    <a href="page_login.html" class="login-btn">登錄</a>
+                </li>
+            </ul>
+        </div> -->
+    </div>
+    <!--/top-->
+    <!--=== End Top ===-->
+
+    <!--=== Header ===-->
+    <div class="header">
+        <div class="container">
+            <!-- Logo -->
+            <div class="navlogo">
+                <a href="{:U('Index/index')}">
+                    <img id="logo-header" src="__HOME_PUBLIC__img/logo-03(1).png" alt="Logo" />
+                </a>
+            </div>
+            <!-- /logo -->
+
+            <!-- Menu -->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <!-- /nav-collapse -->
+                    <div class="nav-collapse collapse">
+                        <ul class="nav top-2 navthub">
+                            <li <if condition="$Method eq 'Index'">class="active"</if>>
+                                <a href="{:U('Index/index')}" class="dropdown-toggle" data-toggle="">首頁
+                                </a>
+                            </li>
+                            <li <if condition="$Method eq 'Active'">class="active"</if>>
+                                <a href="{:U('Active/index')}" class="dropdown-toggle" data-toggle="">巡禮活動
+                                </a>
+                                <b class="caret-out"></b>
+                            </li>
+                            <li <if condition="$Method eq 'News'">class="active"</if>>
+                                <a href="{:U('News/index')}" class="dropdown-toggle" data-toggle="">新聞資訊
+                                </a>
+
+                                <b class="caret-out"></b>
+                            </li>
+                            <!-- <li <if condition="$Method eq 'StreetHistory'">class="active"</if>>
+                                <a href="{:U('StreetHistory/index')}" class="dropdown-toggle" data-toggle="">街道故事
+                                </a>
+
+                                <b class="caret-out"></b>
+                            </li>
+                            <li <if condition="$Method eq 'Posts'">class="active"</if>>
+                                <a href="{:U('Posts/index')}" class="dropdown-toggle" data-toggle="">特色景點
+                                </a>
+
+                                <b class="caret-out"></b>
+                            </li> -->
+
+
+
+
+
+
+                            	<!-- 社區魅力 -->
+								<li id="mk">	
+									<div class="dropdown">
+										  <div class="hhhh">
+											  <a href="javascript:volid(0)" class="dropdown-toggle" data-toggle="" style="text-decoration:none">
+												  <span style="color: #687074;">
+												  社區魅力
+												 </span>
+											  </a>
+											  <b class="caret-out"></b>
+										  </div>
+									  <div class="dropdown-content">
+											  <a href="{:U('StreetHistory/index')}" class="dropdown-toggle" data-toggle="">街道故事
+											  </a>
+											  <b class="caret-out"></b>
+											  <a href="{:U('Posts/index')}" class="dropdown-toggle" data-toggle="">特色景點
+											  </a>
+											  <b class="caret-out"></b>
+                                              <a href="{:U('CultureHeritage/index')}" class="dropdown-toggle" data-toggle="">文化遺產
+                                              </a>
+                                            <b class="caret-out"></b>
+									  </div>
+
+
+
+
+                                     
+
+
+									</div>
+								  </li>
+
+								<!-- 当窗口宽度小于979px的社區魅力 -->
+								<li id="mtd" onclick="showhide()" <if condition="$Method eq 'StreetHistory'">class="active"</if> style="display:none">
+									<a href="javascript:volid(0)" class="dropdown-toggle" data-toggle="">社區魅力
+									</a>
+
+									<b class="caret-out"></b>
+								</li>
+								<li id="mtg" <if condition="$Method eq 'StreetHistory'">class="active"</if> style="display:none">
+									<a href="{:U('StreetHistory/index')}" class="dropdown-toggle" data-toggle="">街道故事
+									</a>
+
+									<b class="caret-out"></b>
+								</li>
+								<li id="mtgg" <if condition="$Method eq 'Posts'">class="active"</if> style="display:none">
+									<a href="{:U('Posts/index')}" class="dropdown-toggle" data-toggle="">特色景點
+									</a>
+
+									<b class="caret-out"></b>
+								</li>
+                                <li id="mtggg" <if condition="$Method eq 'CultureHeritage'">class="active"</if> style="display:none">
+									<a href="{:U('CultureHeritage/index')}" class="dropdown-toggle" data-toggle="">文化遺產
+									</a>
+
+									<b class="caret-out"></b>
+								</li>
+
+
+
+
+                            
+
+
+
+
+
+
+
+
+
+
+
+                            <!-- 社區商業 -->
+							<li id="k">	
+								<div class="dropdown">
+									  <div class="hhhh">
+                                        
+										  <!-- <a href="{:U('Shop/index')}" class="dropdown-toggle" data-toggle="" style="text-decoration:none">
+											  <span style="color: #687074;">
+												社區商業
+											 </span>
+										  </a> -->
+                                          <a href="javascript:volid(0)" class="dropdown-toggle" data-toggle="" style="text-decoration:none">
+                                            <span style="color: #687074;">
+                                              社區商業
+                                           </span>
+                                        </a>
+										  <b class="caret-out"></b>
+									  </div>
+								  <div class="dropdown-content" name="shoptype" id="shoptype">
+										  <a href="{:U('Shop/categroy','shoptype=discount')}" <if condition="$shoptype == 'discount'">selected="selected"</if>value="discount" class="dropdown-toggle" data-toggle="">優惠
+										  </a>
+										  <b class="caret-out"></b>
+										  <a href="{:U('Shop/categroy','shoptype=food')}" <if condition="$shoptype == 'food'">selected="selected"</if>value="food" class="dropdown-toggle" data-toggle="">美食
+										  </a>
+										  <b class="caret-out"></b>
+										  <a href="{:U('Shop/categroy','shoptype=fashion')}" <if condition="$shoptype == 'fashion'">selected="selected"</if>value="fashion" class="dropdown-toggle" data-toggle="">潮店
+										</a>
+										<b class="caret-out"></b>
+								  </div>
+								</div>
+							  </li>
+
+							<!-- 当窗口宽度小于979px的社區商業 -->
+							<li id="td" onclick="showhide2()" <if condition="$Method eq 'Shop'">class="active"</if> style="display:none">
+								<a href="javascript:volid(0)" class="dropdown-toggle" data-toggle="">社區商業
+								</a>
+
+								<b class="caret-out"></b>
+							</li>
+							<li id="tg" <if condition="$Method eq 'StreetHistory'">class="active"</if> style="display:none">
+								<a href="{:U('Shop/categroy','shoptype=discount')}" <if condition="$shoptype == 'discount'">selected="selected"</if>value="discount" class="dropdown-toggle" data-toggle="">優惠
+								</a>
+
+								<b class="caret-out"></b>
+							</li>
+							<li id="tgg" <if condition="$Method eq 'Posts'">class="active"</if> style="display:none">
+								<a href="{:U('Shop/categroy','shoptype=food')}" <if condition="$shoptype == 'food'">selected="selected"</if>value="food" class="dropdown-toggle" data-toggle="">美食
+								</a>
+
+								<b class="caret-out"></b>
+							</li>
+							<li id="tggg" <if condition="$Method eq 'Posts'">class="active"</if> style="display:none">
+								<a href="{:U('Shop/categroy','shoptype=fashion')}" <if condition="$shoptype == 'fashion'">selected="selected"</if>value="fashion" class="dropdown-toggle" data-toggle="">潮店
+								</a>
+
+								<b class="caret-out"></b>
+							</li>
+
+
+
+
+
+
+
+
+                            <!-- <li <if condition="$Method eq 'Shop'">class="active"</if>>
+                                <a href="{:U('Shop/index')}" class="dropdown-toggle" data-toggle="">特色店鋪
+                                </a>
+                        
+                            </li> -->
+                            <li <if condition="$Method eq 'Media'">class="active"</if>>
+								<a href="{:U('Media/index')}" class="dropdown-toggle" data-toggle="">精彩瞬間
+								</a>
+								<b class="caret-out"></b>
+							</li>
+                            <!-- <li style="margin-right: 20px"><a class="search"><i class="icon-search search-btn"></i></a></li> -->
+                            <li style="margin-right: 20px"><a class="search"><img class="searchxun search-btn icon-search" src="/xiahuan/Public/Static/Home/img/xun.png" /></a></li>
+                            <li class="selectbox" style="margin-left: 10px">
+                                <div class="select">
+                                        <select id="selectbox2" onchange="window.location.href=options[selectedIndex].value">
+                                            <option style="display:none;" value="http://macauonline.net/xiahuan/2020/Index/index.html">2022</option>
+                                            <option value="http://macauonline.net/xiahuan/Index/index.html" >2022</option>
+                                            <option value="http://macauonline.net/xiahuan/2020/Index/index.html">2021</option>
+
+
+                                        </select>
+                                </div>
+                            </li>
+
+                            <!-- <li <if condition="$Method eq 'CultureHeritage'">class="active"</if>>
+                                <a href="{:U('CultureHeritage/index')}" class="dropdown-toggle" data-toggle="">文化遺產
+                                </a>
+
+                                <b class="caret-out"></b>
+                            </li> -->
+
+                           
+                        </ul>
+                        <div class="search-open">
+                            <div class="input-append">
+                                <form action="{:U('Search/index')}" method="get">
+
+                                <input type="text" name="keyword" class="span3" placeholder="請輸入關鍵詞搜索" />
+                                <button type="submit" class="btn-u">Go</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /nav-collapse -->
+                </div>
+                <!-- /navbar-inner -->
+            </div>
+            <!-- /navbar -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!--/header -->
+    <script type="text/javascript">
+        
+        if(document.body.scrollWidth < 979){
+          document.getElementById('mk').style.display = 'none';
+          document.getElementById('mtd').style.display = 'block';
+    
+        }
+        function showhide(){
+            var div=document.getElementById('mtg');
+            var divv=document.getElementById('mtgg');
+            var divvv=document.getElementById('mtggg');
+            if(div.style.display=='block'&& divv.style.display=='block'&& divvv.style.display=='block'){ // == 判断div.display是否为显示
+                        div.style.display='none'; //= 赋值也可了解成改变
+                        divv.style.display='none';
+                        divvv.style.display='none';
+                    }
+                    else{
+                        div.style.display='block';
+                        divv.style.display='block';
+                        divvv.style.display='block';
+                        
+                    } 
+        }
+        if(document.body.scrollWidth < 979){
+          document.getElementById('k').style.display = 'none';
+          document.getElementById('td').style.display = 'block';
+    
+        }
+        function showhide2(){
+            var div=document.getElementById('tg');
+            var divv=document.getElementById('tgg');
+            var divvv=document.getElementById('tggg');
+            if(div.style.display=='block'&& divv.style.display=='block'&& divvv.style.display=='block'){ // == 判断div.display是否为显示
+                        div.style.display='none'; //= 赋值也可了解成改变
+                        divv.style.display='none';
+                        divvv.style.display='none';
+                    }
+                    else{
+                        div.style.display='block';
+                        divv.style.display='block';
+                        divvv.style.display='block';
+                    } 
+        }
+    </script>

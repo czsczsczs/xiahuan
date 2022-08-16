@@ -1,0 +1,329 @@
+<include file="common/header" />
+<style type="text/css">
+	#index_overflow {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	.titlecolor{
+		color:#385A9F;
+		text-decoration:none !important;
+		font-weight: 600;
+	}
+	.borderbottom{
+		border-bottom: unset !important;
+	}
+	.aac:hover{
+		text-decoration:none !important;
+	}
+	.txtstyle{
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		text-indent: 28px;
+		zoom: 0.7;
+		margin-bottom: -13px;
+	}
+	.swiper-button-prev{
+    	left: -70px!important;
+	}
+	.swiper-button-next{
+		right: -70px!important;
+	}
+	.index-activity{
+		position: relative;
+	} 
+	@media (max-width: 768px){
+        body {
+            padding-right: 0px !important;
+             padding-left: 0px!important;;
+        }
+        .container{
+            width: 97%!important;;
+        }
+	}
+</style>
+<!--=== Slider ===-->
+<div class="fullwidthbanner-container">
+	<div class="fullwidthabnner">
+		<ul>
+			<volist name="pcbanner" id="pcbanner_row">
+
+				<li data-transition="pcbannerleft" data-slotamount="1" data-masterspeed="300" data-thumb="__HOME_PUBLIC__img/sliders/revolution/thumbs/thumb1.jpg">
+					<a href="{$pcbanner_row['url']}" target="_blank">
+						<img src="{$pcbanner_row['image']}" alt="" style="object-fit: contain;" />
+					</a>
+				</li>
+			</volist>
+		</ul>
+
+		<div class="tp-bannertimer tp-bottom"></div>
+	</div>
+</div>
+<!--/slider-->
+<!--=== End Slider ===-->
+
+<!--=== Purchase Block ===-->
+<!-- <div class="row-fluid purchase margin-bottom-30">
+    <div class="container">
+		<div class="span9">
+            <span>Unify is a clean and fully responsive incredible Template.</span>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi  vehicula sem ut volutpat. Ut non libero magna fusce condimentum eleifend enim a feugiat.</p>
+        </div>
+        <a href="http://sc.chinaz.com/moban/" class="btn-buy hover-effect">Purchase Now</a>
+    </div>
+</div> -->
+<!--/row-fluid-->
+<!-- End Purchase Block -->
+
+
+<!-- Recent Works -->
+<div class="container">
+	<!-- Recent Works -->
+	<div class="index-activity">
+		<div class="headline">
+			<h3><a class="titlecolor" href="{:U('Active/index')}">巡禮活動</a></h3>
+			<h4 class="borderbottom pull-right breadcrumb"><a class="aac" href="{:U('Active/index')}">查看更多>></a></h4>
+		</div>
+		<div class="swiper-container swiper-con-ac" style="position: static;">
+			<ul class="swiper-wrapper thumbnails ulc">
+				<volist name="active" id="active_row">
+					<li class="swiper-slide" link="{:U('Active/detail',array('id'=>$active_row['id']))}">
+						<div class="thumbnail-style activethumb">
+							<div class="thumbnail-img">
+								<img style="width: 100%;" src="{$active_row['cover']}" alt="" />
+
+							</div>
+							<div class="activemodel">
+							<h3 style="color:#385A9F;text-align: center;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
+								<a class="hover-effect" href="{:U('Active/detail',array('id'=>$active_row['id']))}">{$active_row['title']}</a>
+							</h3>
+							<if condition="$active_row['time']">
+								<p id="index_overflow" title="{$active_row['time']}"><span style="color:#385A9F;">活動時間：</span></p>
+								<p>{$active_row['time']}</p>
+								<else />
+								<p>活動時間：暫無</p>
+							</if>
+							<if condition="$active_row['address']">
+								<p id="index_overflow" title="{$active_row['address']}"><span style="color:#385A9F;">活動地點：</span></p>
+								<p>{$active_row['address']}</p>
+								<else />
+								<p>活動地點：暫無</p>
+							</if>
+							<p id="index_overflow"><a style="text-decoration:none;" class="pull-right" href="{:U('Active/detail',array('id'=>$active_row['id']))}"><img style="max-width: 25px;" src="/xiahuan/Public/Static/Home/img/eye.png">查看詳情</a></p>
+							</div>
+						</div>
+					</li>
+				</volist>
+			</ul>
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+			
+		</div>
+			
+	</div>
+	<!--/thumbnails-->
+	<!-- //End Recent Works -->
+
+
+	<div class="index-activity">
+		<div class="headline">
+			<h3><a class="titlecolor" href="{:U('News/index')}">新聞資訊</a></h3>
+			<h4 class="borderbottom pull-right breadcrumb"><a class="aac" href="{:U('News/index')}">查看更多>></a></h4>
+		</div>
+		<div id="swiper-con-newac" class="swiper-container swiper-con-newac" style="position: static;">
+			
+				<ul class="thumbnails swiper-wrapper ulc">
+					<volist name="news" id="new">
+						<li class="swiper-slide" link="{:U('News/detail',array('id'=>$new['id']))}">
+							<div class="thumbnail-style newthumb">
+								<div class="thumbnail-img" style="width: 100%;">
+									<img style="width: 35%;" src="{$new['cover_width_300']}" alt="" />
+									<div style="width: 60%;float:right;">
+										<h3 style="color: #385A9F;" id="index_overflow" title="{$new['title']}">
+											<a style="color: #385A9F;" class="hover-effect" href="{:U('News/detail',array('id'=>$new['id']))}">{$new['title']}</a>
+										</h3>
+										<p>
+										<div  class="txtstyle">
+											<!-- {$new['content']} -->
+										{$new['content']|htmlspecialchars_decode}
+
+										</div>
+										</p>
+										<p id="index_overflow"><a style="text-decoration:none;" class="pull-right" href="{:U('News/detail',array('id'=>$new['id']))}"><img style="max-width: 25px;" src="/xiahuan/Public/Static/Home/img/eye.png">查看詳情</a></p>
+									</div>
+
+								</div>
+
+							</div>
+
+						</li>
+					</volist>
+
+				</ul>
+		
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
+		
+	</div>
+
+
+
+
+	<div class="index-activity">
+		<div class="headline">
+			<h3><a class="titlecolor">社區魅力</a></h3>
+			<h4 class="borderbottom pull-right breadcrumb"><a class="aac" href="{:U('StreetHistory/index')}">查看更多>></a></h4>
+		</div>
+		<div class="swiper-container swiper-con-meili" style="background-color:#385A9F">
+			<ul class="thumbnails swiper-wrapper ulc">
+                <volist name="streetHistory" id="streetHistory_row" offset="0" length='1'>
+					<li class="swiper-slide streetbottom" link="{:U('StreetHistory/index')}">
+						<div class="thumbnail-style newthumb">
+							<div class="thumbnail-img">
+								<img style="width: 100%;" src="{$streetHistory_row['cover_width_300']}" alt="" />
+								<!-- <a class="btn-more hover-effect" href="{:U('streetHistory/detail',array('id'=>$streetHistory_row['id']))}">查看詳情+</a> -->
+							</div>
+							<h3 id="index_overflow" title="街道故事" style="text-align: center;">
+								<a style="color: white;" class="hover-effect" href="{:U('StreetHistory/index')}">街道故事</a>
+							</h3>
+
+							<p></p>
+						</div>
+					</li>
+				</volist>
+
+
+                <volist name="post" id="p_row" offset="0" length='1'>
+					<li class="swiper-slide streetbottom" link="{:U('Posts/index')}">
+						<div class="thumbnail-style newthumb">
+							<div class="thumbnail-img">
+								<img style="width: 100%;" src="{$p_row['cover_width_300']}" alt="" />
+								<!-- <a class="btn-more hover-effect" href="{:U('streetHistory/detail',array('id'=>$streetHistory_row['id']))}">查看詳情+</a> -->
+							</div>
+							<h3 id="index_overflow" title="特色景點" style="text-align: center;">
+								<a style="color: white;" class="hover-effect" href="{:U('Posts/index')}">特色景點</a>
+							</h3>
+
+							<p></p>
+						</div>
+					</li>
+				</volist>
+
+                <volist name="cultureHeritage" id="cg_row" offset="0" length='1'>
+					<li class="swiper-slide streetbottom" link="{:U('CultureHeritage/index')}">
+						<div class="thumbnail-style newthumb">
+							<div class="thumbnail-img">
+								<img style="width: 100%;" src="{$cg_row['cover_width_300']}" alt="" />
+								<!-- <a class="btn-more hover-effect" href="{:U('streetHistory/detail',array('id'=>$streetHistory_row['id']))}">查看詳情+</a> -->
+							</div>
+							<h3 id="index_overflow" title="文化遺產" style="text-align: center;">
+								<a style="color: white;" class="hover-effect" href="{:U('CultureHeritage/index')}">文化遺產</a>
+							</h3>
+
+							<p></p>
+						</div>
+					</li>
+				</volist>
+				
+			</ul>
+				
+		</div>
+		<!-- <div class="swiper-button-prev">&lt;</div>
+		<div class="swiper-button-next">&gt;</div> -->
+	</div>
+	<!--/thumbnails-->
+	<!-- //End Recent Works -->
+
+	<div class="index-activity ">
+		<!-- Recent Works -->
+		<div class="headline">
+			<h3><a class="titlecolor">社區商業</a></h3>
+			<!-- <h3><a class="titlecolor">社區商業</a></h3> -->
+			<h4 class="borderbottom pull-right breadcrumb"><a class="aac" href="{:U('Shop/index')}">查看更多>></a></h4>
+		</div>
+		<div class=" swiper-container swiper-con-meili" style="background-color:#385A9F">
+			<ul class="thumbnails swiper-wrapper ulc">
+                <volist name="shop" id="s_row1" offset="0" length='1'>
+					<li class="swiper-slide streetbottom" link="{:U('Shop/categroy','shoptype=discount')}">
+						<div class="thumbnail-style newthumb">
+							<div class="thumbnail-img">
+								<!-- <img style="width: 100%;" src="{$s_row1['cover_width_300']}" alt="" /> -->
+								<img style="width: 100%;" src="__HOME_PUBLIC__img/discount-04.jpg" alt="" />
+							</div>
+							<h3 id="index_overflow" title="優惠" style="text-align: center;">
+								<a style="color: white;" class="hover-effect" href="{:U('Shop/categroy','shoptype=discount')}">優惠</a>
+							</h3>
+
+							<p></p>
+						</div>
+					</li>
+				</volist>
+
+
+                <volist name="shop" id="s_row2" offset="0" length='1'>
+					<li class="swiper-slide streetbottom" link="{:U('Shop/categroy','shoptype=food')}">
+						<div class="thumbnail-style newthumb">
+							<div class="thumbnail-img">
+								<!-- <img style="width: 100%;" src="{$s_row2['cover_width_300']}" alt="" /> -->
+								<img style="width: 100%;" src="__HOME_PUBLIC__img/food-05.jpg" alt="" />
+							</div>
+							<h3 id="index_overflow" title="美食" style="text-align: center;">
+								<a style="color: white;" class="hover-effect" href="{:U('Shop/categroy','shoptype=food')}">美食</a>
+							</h3>
+
+							<p></p>
+						</div>
+					</li>
+				</volist>
+
+                <volist name="shop" id="s_row3" offset="0" length='1'>
+					<li class="swiper-slide streetbottom" link="{:U('Shop/categroy','shoptype=fashion')}">
+						<div class="thumbnail-style newthumb">
+							<div class="thumbnail-img">
+								<!-- <img style="width: 100%;" src="{$s_row3['cover_width_300']}" alt="" /> -->
+								<img style="width: 100%;" src="__HOME_PUBLIC__img/fashion-06.jpg" alt="" />
+							</div>
+							<h3 id="index_overflow" title="潮店" style="text-align: center;">
+								<a style="color: white;" class="hover-effect" href="{:U('Shop/categroy','shoptype=fashion')}">潮店</a>
+							</h3>
+
+							<p></p>
+						</div>
+					</li>
+				</volist>
+				<!-- <div class="swiper-button-prev">&lt;</div>
+			<div class="swiper-button-next">&gt;</div> -->
+
+			</ul>
+			
+		</div>
+				
+		<!--/row-->
+		<!-- //End Recent Works -->
+	</div>
+
+
+
+
+
+
+
+</div>
+<include file="common/footer" />
+<script type="text/javascript">
+	var wz = "http://macauonline.net/xiahuan/Index/index.html";
+
+	function shareFacebook() {
+		shareToFB("下環巡禮", wz);
+	}
+
+</script>
+
+<!--/container-->
+
+
+

@@ -1,0 +1,59 @@
+<include file="common/header" />
+<style>
+  #start_tip{
+    display: none;margin-left:10px;
+  }
+  #end_tip{
+    display: none;margin-left:10px;
+  }
+</style>
+  <div id="page-wrapper">
+    <div class="col-md-12 graphs">
+     <div class="xs">
+        <h3 id="title">編輯管理員</h3>
+        <div class="well1 white">
+        <form class="form-floating ng-pristine ng-invalid ng-invalid-required ng-valid-email ng-valid-url ng-valid-pattern" novalidate="novalidate" ng-submit="submit()" action="{:U('Admin/edit')}" method="post">
+          <input type="hidden" name="id" value="{$admin['id']}">
+          <fieldset>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="control-label">名稱 *</label>
+                <input type="text" class="form-control1 ng-invalid ng-invalid-required ng-touched" name="username" value="{$admin['username']}">
+              </div>
+              <div class="form-group">
+                <label class="control-label">手機號碼</label>
+                <input type="text" class="form-control1 ng-invalid ng-invalid-required ng-touched" name="mobile_phone" value="{$admin['mobile_phone']}">
+              </div>
+              <div class="form-group">
+                <label class="control-label">郵箱</label>
+                <input type="text" class="form-control1 ng-invalid ng-invalid-required ng-touched" name="email" value="{$admin['email']}">
+              </div>
+              <div class="form-group">
+                <label class="control-label">管理員等級*</label><br>
+                <select class="form-control1 ng-invalid ng-invalid-required" ng-model="model.select" name="is_admin">
+                  <option <if condition="$admin['is_admin'] == 1"> selected="selected</if> value="1">超級管理員</option>
+                  <option <if condition="$admin['is_admin'] == 2"> selected="selected</if> value="2">普通管理員</option>
+                 
+                </select>
+              </div>
+              
+            </div>
+            
+           <div class="col-md-12">
+            <div class="form-group">
+                <button class="btn btn-info">提交</button>
+                <button type="button" class="btn btn-warning warning_22" onclick="javascript:history.back(-1);">返回列表</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <include file="common/footer" />
+   </div>
+      </div>
+      <!-- /#page-wrapper -->
+   </div>
+    <!-- /#wrapper -->
+</body>
+</html>

@@ -1,0 +1,192 @@
+<include file="common/header" />
+<!--=== End Header ===-->
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs margin-bottom-40">
+	<div class="container">
+        <ul class="pull-left breadcrumb">
+            <li><a href="{:U('Index/index')}">首頁</a> <span class="divider">/</span></li>
+            <li><a href="{:U('Active/index')}">社區活動</a> <span class="divider">/</span></li>
+            <li class="active">{$active['title']}</li>
+        </ul>
+    </div><!--/container-->
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+
+<!--=== Content Part ===-->
+<div class="container portfolio-item">
+	<div class="row-fluid margin-bottom-20">
+		<!-- Carousel -->
+        <div class="span7">
+            <div id="myCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                    <if condition="$images">
+                    <volist name="images" key="key" id="row">
+                        <div class="item <if condition='$key eq 1'> active</if>">
+                            <img src="{$row['savepath']}" alt="" />
+                        </div>
+                    </volist>
+                    <else/>
+                    <div class="item active">
+                        <img src="{$active['cover']}" alt="" />
+                    </div>
+                    </if>
+                </div>
+                <div class="carousel-arrow">
+                    <a data-slide="prev" href="#myCarousel" class="left carousel-control"><i class="icon-angle-left"></i></a>
+                    <a data-slide="next" href="#myCarousel" class="right carousel-control"><i class="icon-angle-right"></i></a>
+                </div>
+            </div>
+        </div><!--/span7-->
+        <!-- //End Tabs and Carousel -->
+
+        <div class="span5">
+        	<h3>{$active['title']}</h3>
+            <p>{$active['content']|htmlspecialchars_decode}</p>
+
+            <ul class="unstyled" style="font-size: 16px">
+            	<if condition="$active['time']">
+                    <li>
+                        <span style="width:110px;display: inline-block;vertical-align: top;"><i class="icon-time color-green"></i> 活動時間：</span>
+                        <span style="width:350px;display: inline-block;vertical-align: top;">{$active['time']}</span>
+                    </li>
+                </if>
+            	<li>
+                    <span style="width:110px;display: inline-block;vertical-align: top;"><i class="icon-map-marker color-green"></i> 活動地點：</span>
+                    <span style="width:350px;display: inline-block;vertical-align: top;">{$active['address']}</span>
+                </li>
+            	<li> 
+                    <span style="width:110px;display: inline-block;vertical-align: top;"><i class="icon-tags color-green"></i> 活動簡介：</span>
+                    <span style="width:350px;display: inline-block;vertical-align: top;">{$active['other']}</span>
+                </li>
+            </ul>
+        </div>
+        <div class="headdiv">
+            <span style="width: 100%;display: inline-block;">上一篇：
+                <if condition="$before['title'] neq NULL"> 
+                    <a href="{:U(Active/detail,array('id'=>$before['id']))}" class="handover">{$before['title']}</a>
+                <else />
+                    <a class="no">無</a>
+                </if>
+            </span>
+            <span>下一篇：
+                <if condition="$later['title'] neq NULL"> 
+                    <a href="{:U(Active/detail,array('id'=>$later['id']))}" class="handover">{$later['title']}</a>
+                <else />
+                    <a class="no">無</a>
+                </if>
+            </span>
+        </div>
+    </div><!--/row-fluid-->
+
+	<!-- Recent Works -->
+    <div class="headline">
+        <h3>其他活動</h3>
+        <div class="recent-work-btn">
+            <div class="swiper-button-prev recent-work-prev"></div>
+            <div class="swiper-button-next recent-work-next"></div>
+        </div>
+    </div>
+    <div class="row-fluid margin-bottom-40 swiper-container">
+        <ul class="recent-work swiper-wrapper">
+            <volist name="re_active" id="active">
+            <li class="swiper-slide" style="height:250px;">
+                <a href="{:U(Active/detail,array('id'=>$active['id']))}">
+                	<em class="overflow-hidden"><img style="height:180px;" src="{$active['cover']}" alt="" /></em>
+                    <span>
+                        <strong style="width:265px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{$active['title']}</strong>
+                        <i></i>
+                    </span>
+                </a>
+            </li>
+            </volist>
+        </ul>
+	</div><!--/row-->
+	<!-- //End Recent Works -->
+</div><!--/container-->
+<style type="text/css">
+    .span{
+        width:461.5px;height:700px;margin-left: 10%;
+    }
+    .headdiv{
+        font-size: 18px;
+        clear: left;
+
+        /*margin: 0 10% 0 10%;*/
+    }
+    .headline{
+        margin: 0px;
+    }
+    .handover{
+        padding: 3px;
+        color: #cc9966;
+        font-size: 18px;
+    }
+    .handover:hover{
+        color:#fcd600;
+        text-decoration: none;
+    }
+    .no{
+        pointer-events:none;
+        color:#ddd;
+        font-size: 18px;
+    }
+    
+    @media (max-width: 768px){
+        .span7{
+            width:100%
+           
+            margin: 0px;
+        }
+    }
+    @media (max-width: 425px){
+        .span7{
+            width:100%
+            margin: 0px;
+        }
+    }
+    @media (max-width: 320px){
+        .span7{
+            width:100%
+            margin: 0px;
+        }
+    }
+
+</style>
+
+<!--=== End Content Part ===-->
+<script>
+window.onload = function() {
+    var mySwiper = new Swiper ('.swiper-container', {
+    slidesPerView : 4,
+    slidesPerGroup : 4,
+    spaceBetween : 10,
+    breakpoints: {
+        1024: {
+        slidesPerView : 4,
+        slidesPerGroup : 4,
+        spaceBetween : 10,
+        },
+        768: {
+        slidesPerView: 3,
+        slidesPerGroup : 3,
+        spaceBetween : 10,
+        },
+        640: {
+        slidesPerView: 2,
+        slidesPerGroup : 2,
+        spaceBetween : 10,
+        },
+        460: {
+        slidesPerView: 1,
+        slidesPerGroup : 1,
+        }
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  })
+}
+</script>
+<!--=== Footer ===-->
+<include file="common/footer" />

@@ -1,0 +1,210 @@
+<include file="common/header" />
+<!--=== End Header ===-->
+
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs margin-bottom-20">
+    <div class="container">
+        <h1 class="color-green pull-left"></h1>
+        <ul class="pull-left breadcrumb">
+            <li><a href="{:U('Index/index')}">首頁</a> <span class="divider">/</span></li>
+            <li><a href="{:U('Shop/index')}">特色店鋪</a> <span class="divider">/</span></li>
+            <li class="active">{$shop['title']}</li>
+        </ul>
+    </div><!--/container-->
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+
+<!--=== Content Part ===-->
+<div class="container">
+    <div class="row-fluid blog-page portflio_details">
+        <!-- Left Sidebar -->
+        <!-- <div class="span9"> -->
+            <!-- <div class="blog margin-bottom-30"> -->
+                <!-- <h3 class="text-center">{$shop['title']}</h3> -->
+                <!-- <div class="text-center">作者：</div> -->
+                <!-- <div class="blog-img" style="font-size: 20px;"></div> -->
+                    <!-- <p>{$shop['content']|htmlspecialchars_decode}</p> -->
+                    <!-- <if condition="$shop['business_hours']">
+                        <p style="color: rgb(51, 51, 51);">開店時間 : {$shop['business_hours']}</p>
+                    </if>
+                    <if condition="$shop['address']">
+                    <p style="color: rgb(51, 51, 51);">地址 : {$shop['address']}</p>
+                    </if> -->
+            <!-- </div> --><!--/blog-->
+            <!-- <ul class="unstyled" style="font-size: 16px">
+                <li><i class="icon-time color-green"></i> 開放時間:{$post['business_hours']}</li>
+                <li><i class="icon-calendar color-green"></i> 地點:{$post['address']}</li>
+            </ul> -->
+
+
+
+        <!-- </div> --><!--/span9-->
+
+        <div class="shop">
+            <div class="span7" style="clear: right; ">
+                <div id="myCarousel" class="carousel slide">
+                    <div class="carousel-inner" style="margin-top: 15px; object-fit: contain;">
+                        <if condition="$images">
+                        <volist name="images" key="key" id="row">
+                            <div class="item <if condition='$key eq 1'> active</if>">
+                                <img src="{$row['savepath']}" alt="" style="width:100%"/>
+                            </div>
+                        </volist>
+                        <else/>
+                        <div class="item active">
+                            <img src="{$shop['cover']}" alt="" style="width:100%"/>
+                        </div>
+                        </if>
+                    </div>
+                    <div class="carousel-arrow">
+                        <a data-slide="prev" href="#myCarousel" class="left carousel-control"><i class="icon-angle-left"></i></a>
+                        <a data-slide="next" href="#myCarousel" class="right carousel-control"><i class="icon-angle-right"></i></a>
+                    </div>
+                </div>
+            </div><!--/span7-->
+            <!-- //End Tabs and Carousel -->
+
+            <div class="span5" >
+				
+                <h3>{$shop['title']}</h3>
+                <p>{$shop['content']|htmlspecialchars_decode}</p>
+
+                <ul class="unstyled" style="font-size: 16px">
+                    <li>
+                        <span style="width:80px;display: inline-block;vertical-align: top;"><i class="icon-phone color-green"></i> 電話：</span>
+                        <span style="width:210px;display: inline-block;vertical-align: top;">{$shop['phone']}</span>
+                    </li>
+                    <li>
+                        <span style="width:80px;display: inline-block;vertical-align: top;"><i class="icon-map-marker color-green"></i> 地點：</span>
+                        <span style="width:210px;display: inline-block;vertical-align: top;">{$shop['address']}</span>
+                    </li>
+                </ul>
+            </div>
+            <div style="font-size: 18px;margin-bottom:15px ;padding-top: 10px;">
+                <span style="width: 100%;display: inline-block;">上一篇：
+                    <if condition="$before['title'] neq NULL"> 
+                        <a href="{:U(Shop/detail,array('id'=>$before['id']))}" class="handover">{$before['title']}</a>
+                    <else />
+                        <a class="no">無</a>
+                    </if>
+                </span>
+                <span>下一篇：
+                    <if condition="$later['title'] neq NULL"> 
+                        <a href="{:U(Shop/detail,array('id'=>$later['id']))}" class="handover">{$later['title']}</a>
+                    <else />
+                        <a class="no">無</a>
+                    </if>
+                </span>
+            </div>
+            <if condition="empty($re_shop) neq true">
+    			<div class="headline" style="display:block;margin:0px 0 25px 0;border-bottom:1px dotted #e4e9f0;clear: left;">
+                    <h3>猜你喜歡</h3>
+                    <div class="recent-work-btn">
+                        <div class="swiper-button-prev recent-work-prev"></div>
+                        <div class="swiper-button-next recent-work-next"></div>
+                    </div>
+                </div>
+                <div class="swiper-container swiper-con-shop">
+                    <ul class="thumbnails swiper-wrapper ulc">
+                        <volist name="re_shop" id="shop">
+                        <li class="swiper-slide" style="height: 250px; width: 285px; margin-right: 10px;">
+                            <a class="shop_a" href="{:U(Shop/detail,array('id'=>$shop['id']))}" style="text-align:center;background:#fcfcfc;display:inline-block;">
+                                <em class="overflow-hidden"><img style="width:265px;height:180px;" src="{$shop['cover_width_300']}" alt="" /></em>
+                                <span style="display: block;padding: 10px;border-bottom: solid 2px #eee;">
+                                    <strong>{$shop['title']}</strong>
+                                    <i></i>
+                                </span>
+                            </a>
+                        </li>
+                        </volist>
+                    </ul>
+                </div>
+            </if>
+        </div>
+
+        <!-- Right Sidebar -->
+        <include file="common/page_right"/>
+        <!--/span3-->
+
+        <!-- Recent Works -->
+        <!-- <div class="headline1">
+            <h3>其他店鋪</h3>
+            <div class="recent-work-btn">
+                <div class="swiper-button-prev recent-work-prev"></div>
+                <div class="swiper-button-next recent-work-next"></div>
+            </div>
+        </div>
+        <div class="swiper-container swiper-con-activity">
+            <ul class="thumbnails swiper-wrapper ulc">
+                <volist name="re_shop" id="shop_re">
+                <li class="swiper-slide" style="height:250px;">
+                    <a href="{:U(Shop/detail,array('id'=>$shop_re['id']))}">
+                        <em class="overflow-hidden"><img style="height:180px;" src="{$shop_re['cover']}" alt="" /></em>
+                        <span>
+                            <strong>{$shop_re['title']}</strong>
+                            <i></i>
+                        </span>
+                    </a>
+                </li>
+                </volist>
+            </ul>
+        </div> -->
+    </div><!--/row-fluid-->
+</div><!--/container-->
+<!--=== End Content Part ===-->
+<style type="text/css">
+	.shop{
+		 display: block;
+		 float: left;
+		 width: 74.3%
+	}
+	.span{
+		margin-top: 10px;
+	}
+    .headline{
+        margin: 0px;
+    }
+    .handover{
+        padding: 3px;
+        color: #cc9966;
+        font-size: 18px;
+    }
+    .handover:hover{
+        color:#fcd600;
+        text-decoration: none;
+    }
+    .no{
+        pointer-events:none;
+        color:#ddd;
+        font-size: 18px;
+    }
+
+    @media (max-width: 768px){
+		.shop{
+			width: 100%;
+		}
+        .span5{
+            width:100%;
+            margin: 0px;
+        }
+		.span7{
+			width: auto;
+		}
+    }
+    @media (max-width: 425px){
+        .span5{
+             width:100%;
+            margin: 0px;
+        }
+    }
+    @media (max-width: 320px){
+        .span5{
+             width:100%;
+            margin: 0px;
+        }
+    }
+
+</style>
+
+<!--=== Footer ===-->
+<include file="common/footer" />

@@ -1,0 +1,145 @@
+    <!--=== Footer ===-->
+    <div class="footer">
+        <img src="__HOME_PUBLIC__img/footer/footer.jpg" class="footer-img footer-img-pc" alt="" />
+        <img src="__HOME_PUBLIC__img/footer/footer-mod.jpg" class="footer-img footer-img-mod" alt="" />
+    </div><!--/footer-->
+    <!--=== End Footer ===-->
+
+    <!--=== Copyright ===-->
+    <div class="copyright">
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span8">
+                    <p>
+                        <a style="color: #00000;" href="http://www.macautech.net/">普及科技（澳門）有限公司</a>提供技術支持
+                    </p>
+                </div>
+                <!--<div class="span4">
+                    <a href="{:U('Index/index')}">
+                        <img id="logo-footer" src="__HOME_PUBLIC__img/logo2-default.png" class="" alt="pull-right" />-->
+                    </a>
+                </div>
+            </div>
+            <!--/row-fluid-->
+        </div>
+        <!--/container-->
+    </div>
+    <!--/copyright-->
+    <!--=== End Copyright ===-->
+
+    <!-- JS Global Compulsory -->
+    <script type="text/javascript" src="__HOME_PUBLIC__js/jquery-1.8.2.min.js"></script>
+    <!-- <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=PSGDO96ZzxBUijinzhN6PajEn75enP1c" /> -->
+    <script type="text/javascript" src="__HOME_PUBLIC__js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="__HOME_PUBLIC__plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- JS Implementing Plugins -->
+    <script type="text/javascript" src="__HOME_PUBLIC__plugins/revolution_slider/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script type="text/javascript" src="__HOME_PUBLIC__plugins/revolution_slider/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="__HOME_PUBLIC__plugins/swiper/swiper-4.4.1.min.js"></script>
+    <script type="text/javascript" src="__HOME_PUBLIC__plugins/bxslider/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="__HOME_PUBLIC__plugins/flexslider/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="__HOME_PUBLIC__plugins/parallax-slider/js/modernizr.js"></script>
+    <script type="text/javascript" src="__HOME_PUBLIC__plugins/parallax-slider/js/jquery.cslider.js"></script>
+    <script type="text/javascript" src="__HOME_PUBLIC__plugins/portfolioSorting/js/jquery.quicksand.js"></script>
+    <script type="text/javascript" src="__HOME_PUBLIC__plugins/portfolioSorting/js/sorting.js"></script>
+    <script type="text/javascript" src="__HOME_PUBLIC__plugins/back-to-top.js"></script>
+    <!-- JS Page Level -->
+    <script type="text/javascript" src="__HOME_PUBLIC__js/app.js"></script>
+    <script type="text/javascript" src="__HOME_PUBLIC__js/pages/index.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+
+            var winWidth=$("html").width();
+            if(winWidth>767){
+                $(".footer-img-pc").show();
+                $(".footer-img-mod").hide();
+            }else{
+                $(".footer-img-mod").show();
+                $(".footer-img-pc").hide();
+            }
+
+            var mySwiper = new Swiper ('.swiper-con-activity', {
+            // loop: true,
+            slidesPerView :4,
+            spaceBetween : 10,
+            breakpoints: {
+                1200: {
+                    slidesPerView: 4,
+                },
+                979: {
+                slidesPerView: 3,
+                },
+                767: {
+                slidesPerView: 2,
+                },
+                460: {
+                slidesPerView: 1,
+                }
+            },
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+            });
+
+            var mySwiper = new Swiper ('.swiper-con-scenic', {
+            loop: true,
+            slidesPerView: 4,
+            slidesPerGroup : 4,
+            spaceBetween : 10,
+            breakpoints: {
+                1200: {
+                    slidesPerView: 4,
+                    slidesPerGroup : 4,
+                },
+                979: {
+                slidesPerView: 3,
+                slidesPerGroup : 3,
+                },
+                767: {
+                slidesPerView: 2,
+                slidesPerGroup : 2,
+                },
+                460: {
+                slidesPerView: 1,
+                slidesPerGroup : 1,
+                }
+            },
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+            });
+
+            App.init();
+            App.initBxSlider1();
+            App.initSliders();
+            // Index.initParallaxSlider();
+            Index.initRevolutionSlider();
+        });
+
+        // var map = new BMap.Map("map");
+        // var point = new BMap.Point(116.404, 39.915);
+        // map.centerAndZoom(point, 15);
+        // var marker = new BMap.Marker(point); // 创建标注
+        // map.addOverlay(marker); // 将标注添加到地图中
+        // marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+        jQuery(document).ready(function() {
+            App.init();
+        });
+        jQuery(document).ready(function () {
+            App.init();
+            App.initBxSlider1();
+            App.initSliders();
+            Index.initParallaxSlider();
+        });
+    </script>
+    <!--[if lt IE 9]>
+    <script src="__HOME_PUBLIC__js/respond.js"></script>
+<![endif]-->
+
+</body>
+
+</html>

@@ -1,0 +1,576 @@
+[ 2022-07-28T17:52:20+08:00 ] 219.131.240.191 /xiahuan/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001215s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003851s ]
+SQL: SHOW COLUMNS FROM `arm_active` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `arm_active` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_news` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `arm_news` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY grade desc,created desc LIMIT 4   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `arm_media` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `arm_media` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY grade desc,created desc LIMIT 3   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_media2` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `arm_media2` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 3   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_shop` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `arm_shop` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY grade desc,created desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_street_history` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `arm_street_history` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY rand() LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `arm_shop` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY rand() LIMIT 1   [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `arm_posts` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `arm_posts` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY rand() LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `arm_active` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `arm_slide` [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `arm_p_cbanner` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `arm_introduce` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `arm_community_image` [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `arm_street_history` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `arm_shop` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `arm_posts` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `arm_news` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `arm_media` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_media2` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_culture_heritage` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `arm_links` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `arm_slide` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY re_time desc LIMIT 4   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `arm_p_cbanner` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY re_time desc LIMIT 6   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `arm_active` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `arm_community_image` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 10   [ RunTime:0.0074s ]
+SQL: SELECT * FROM `arm_street_history` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY sort desc,created desc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `arm_shop` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0016s ]
+SQL: SELECT * FROM `arm_posts` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0023s ]
+SQL: SELECT * FROM `arm_news` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `arm_media` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `arm_media2` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `arm_culture_heritage` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY sort desc,created desc  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `arm_links` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 50   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000336s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000399s ]
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 381 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 384 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 387 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 402 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 408 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 414 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045026s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045088s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000896s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002738s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003714s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001476s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001587s ]
+
+[ 2022-07-28T18:13:38+08:00 ] 101.89.29.78 /xiahuan/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000058s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001193s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003636s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004897s ]
+SQL: SHOW COLUMNS FROM `arm_active` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `arm_active` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `arm_news` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `arm_news` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY grade desc,created desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `arm_media` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `arm_media` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY grade desc,created desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `arm_media2` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `arm_media2` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `arm_shop` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `arm_shop` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY grade desc,created desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `arm_street_history` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `arm_street_history` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY rand() LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `arm_shop` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY rand() LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `arm_posts` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `arm_posts` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY rand() LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `arm_active` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_slide` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_p_cbanner` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_introduce` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_community_image` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_street_history` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_shop` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_posts` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_news` [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `arm_media` [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `arm_media2` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_culture_heritage` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_links` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `arm_slide` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY re_time desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_p_cbanner` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY re_time desc LIMIT 6   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_active` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_community_image` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `arm_street_history` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY sort desc,created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_shop` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `arm_posts` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_news` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_media` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_media2` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_culture_heritage` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY sort desc,created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_links` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 50   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000301s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000343s ]
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 381 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 384 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 387 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 402 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 408 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 414 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022570s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022610s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000805s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001840s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002702s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001127s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001174s ]
+
+[ 2022-07-28T18:19:46+08:00 ] 219.131.240.191 /xiahuan//banner?id=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000661s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001161s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-07-28T18:19:46+08:00 ] 219.131.240.191 /xiahuan//lists?type=shop
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000628s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000829s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001544s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-07-28T18:19:46+08:00 ] 219.131.240.191 /xiahuan//lists?type=shop&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000990s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000972s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002049s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-07-28T18:20:00+08:00 ] 219.131.240.191 /xiahuan//banner?id=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001185s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-07-28T18:20:00+08:00 ] 219.131.240.191 /xiahuan//lists?type=post&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001193s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-07-28T18:20:17+08:00 ] 219.131.240.191 /xiahuan//lists?type=activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000050s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001214s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-07-28T18:20:17+08:00 ] 219.131.240.191 /xiahuan//banner?id=6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000048s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000486s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000696s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001249s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-07-28T18:20:29+08:00 ] 219.131.240.191 /xiahuan/banner?id=6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000630s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001749s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-07-28T18:20:29+08:00 ] 219.131.240.191 /xiahuan/lists?type=activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000630s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001749s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-07-28T23:20:44+08:00 ] 185.191.171.13 /xiahuan/Posts/detail/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001020s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002719s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003810s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-07-28T23:59:23+08:00 ] 173.252.107.22 /xiahuan/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000057s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001031s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003107s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004202s ]
+SQL: SHOW COLUMNS FROM `arm_active` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `arm_active` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 4   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_news` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `arm_news` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY grade desc,created desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_media` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `arm_media` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY grade desc,created desc LIMIT 3   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `arm_media2` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `arm_media2` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 3   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `arm_shop` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `arm_shop` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY grade desc,created desc LIMIT 4   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_street_history` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `arm_street_history` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY rand() LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `arm_shop` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY rand() LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `arm_posts` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `arm_posts` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY rand() LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `arm_active` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_slide` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `arm_p_cbanner` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `arm_introduce` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `arm_community_image` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `arm_street_history` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_shop` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `arm_posts` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `arm_news` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_media` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `arm_media2` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_culture_heritage` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `arm_links` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `arm_slide` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY re_time desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `arm_p_cbanner` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY re_time desc LIMIT 6   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `arm_active` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `arm_community_image` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 10   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `arm_street_history` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY sort desc,created desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `arm_shop` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0028s ]
+SQL: SELECT * FROM `arm_posts` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `arm_news` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `arm_media` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `arm_media2` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `arm_culture_heritage` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY sort desc,created desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `arm_links` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 50   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000301s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000343s ]
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 381 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 384 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 387 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 402 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 408 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 414 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025330s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025375s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001870s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002736s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001224s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001287s ]
+
+[ 2022-07-28T23:59:23+08:00 ] 173.252.107.15 /xiahuan/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000052s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001222s ]
+SQL: SHOW COLUMNS FROM `arm_active` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `arm_active` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `arm_news` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `arm_news` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY grade desc,created desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `arm_media` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `arm_media` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY grade desc,created desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `arm_media2` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `arm_media2` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `arm_shop` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `arm_shop` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY grade desc,created desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `arm_street_history` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `arm_street_history` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY rand() LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `arm_shop` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY rand() LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `arm_posts` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `arm_posts` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY rand() LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `arm_active` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_slide` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_p_cbanner` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_introduce` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_community_image` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_street_history` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_shop` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_posts` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_news` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_media` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_media2` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_culture_heritage` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_links` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `arm_slide` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY re_time desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_p_cbanner` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY re_time desc LIMIT 6   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_active` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_community_image` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_street_history` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY sort desc,created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_shop` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `arm_posts` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_news` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `arm_media` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_media2` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_culture_heritage` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY sort desc,created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_links` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 50   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000303s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000345s ]
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 381 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 384 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 387 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 402 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 408 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 414 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016606s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016645s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000211s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001297s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001558s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000656s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000721s ]
+
+[ 2022-07-28T23:59:24+08:00 ] 173.252.107.14 /xiahuan/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000625s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001007s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001722s ]
+SQL: SHOW COLUMNS FROM `arm_active` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `arm_active` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `arm_news` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `arm_news` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY grade desc,created desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `arm_media` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `arm_media` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY grade desc,created desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `arm_media2` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `arm_media2` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `arm_shop` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `arm_shop` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY grade desc,created desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `arm_street_history` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `arm_street_history` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY rand() LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `arm_shop` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY rand() LIMIT 1   [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `arm_posts` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `arm_posts` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY rand() LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `arm_active` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `arm_slide` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_p_cbanner` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_introduce` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_community_image` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_street_history` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_shop` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_posts` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_news` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_media` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_media2` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_culture_heritage` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_links` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `arm_slide` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY re_time desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_p_cbanner` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY re_time desc LIMIT 6   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_active` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_community_image` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_street_history` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY sort desc,created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_shop` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `arm_posts` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_news` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `arm_media` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_media2` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_culture_heritage` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY sort desc,created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_links` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 50   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000302s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000340s ]
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 381 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 384 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 387 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 402 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 408 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 414 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016335s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016371s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000199s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001317s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001568s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000493s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000530s ]
+
+[ 2022-07-28T23:59:24+08:00 ] 69.171.251.119 /xiahuan/?fbclid=IwAR06lfdmGao0cA6Gfv_Yh-f8U4cN0668P5zpFrYNX2Qt_AzfCxhLo5dyzvQ
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000050s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000450s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003813s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004326s ]
+SQL: SHOW COLUMNS FROM `arm_active` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `arm_active` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `arm_news` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `arm_news` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY grade desc,created desc LIMIT 4   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `arm_media` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `arm_media` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY grade desc,created desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `arm_media2` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `arm_media2` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `arm_shop` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `arm_shop` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY grade desc,created desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `arm_street_history` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `arm_street_history` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY rand() LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `arm_shop` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY rand() LIMIT 1   [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `arm_posts` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `arm_posts` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY rand() LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `arm_active` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_slide` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_p_cbanner` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_introduce` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `arm_community_image` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_street_history` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_shop` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_posts` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_news` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_media` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_media2` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_culture_heritage` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_links` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `arm_slide` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY re_time desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_p_cbanner` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY re_time desc LIMIT 6   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_active` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_community_image` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_street_history` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY sort desc,created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_shop` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `arm_posts` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `arm_news` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `arm_media` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_media2` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_culture_heritage` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY sort desc,created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_links` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 50   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000336s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000391s ]
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 381 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 384 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 387 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 402 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 408 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 414 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023961s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024013s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001398s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001756s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000505s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000542s ]
+
+[ 2022-07-28T23:59:53+08:00 ] 173.252.107.118 /xiahuan/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000054s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000431s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000698s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001187s ]
+SQL: SHOW COLUMNS FROM `arm_active` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `arm_active` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `arm_news` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `arm_news` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY grade desc,created desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `arm_media` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `arm_media` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY grade desc,created desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `arm_media2` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `arm_media2` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `arm_shop` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `arm_shop` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY grade desc,created desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `arm_street_history` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `arm_street_history` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY rand() LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `arm_shop` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY rand() LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `arm_posts` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `arm_posts` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY rand() LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `arm_active` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_slide` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_p_cbanner` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_introduce` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_community_image` [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `arm_street_history` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_shop` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_posts` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_news` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_media` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_media2` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_culture_heritage` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_links` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `arm_slide` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY re_time desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_p_cbanner` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY re_time desc LIMIT 6   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_active` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_community_image` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 10   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_street_history` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY sort desc,created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_shop` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `arm_posts` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `arm_news` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `arm_media` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_media2` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_culture_heritage` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY sort desc,created desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `arm_links` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 50   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000300s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000339s ]
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 381 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 384 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 387 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 402 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 408 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 414 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017166s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017202s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000200s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001344s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001596s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000534s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000578s ]
+

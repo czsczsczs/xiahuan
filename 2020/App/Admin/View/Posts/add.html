@@ -1,0 +1,367 @@
+<include file="common/header" />
+<script src="__PUBLIC__ueditor/ueditor.config.js"></script>
+<script src="__PUBLIC__ueditor/ueditor.all.js"></script>
+<style>
+  #start_tip{
+    display: none;
+  }
+  #end_tip{
+    display: none;
+  }
+  </style>
+            <div id="page-wrapper">
+                <div class="graphs">
+                    <div class="xs">
+                        <h3>
+                            新增景點
+                        </h3>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="horizontal-form">
+                                <form class="form-horizontal" action="{:U('Posts/create')}" method="post">
+                                    
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label" for="focusedinput">所屬街道*</label>
+                                        <div class="col-sm-8">
+                                           <select class="form-control select2" name="street_id" ng-model="model.select" required="">
+                                                <option value="">請選擇</option>
+                                                <volist name="street" id="row">
+                                                <option value="{$row['id']}">{$row['name']}</option>
+                                                </volist>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <p class="help-block">
+                                               
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label" for="focusedinput"  required="">標題*</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control1" id="title" name="title" type="text">
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <p class="help-block">
+                                               
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label" for="focusedinput">簡介</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control1" id="description" name="description" type="text">
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="form-group" id="editor">
+                                        <label class="col-sm-2 control-label" for="focusedinput">內容</label>
+                                        <div class="col-sm-8">
+                                             <script type="text/javascript">
+                                                var ue = UE.getEditor('content',{
+                                                    initialFrameHeight: 500,//设置编辑器高度
+                                                    scaleEnabled: true//设置不自动调整高度
+                                                });
+                                               
+                                            </script>
+
+                                            <!-- 编辑器容器 -->
+                                            <script id="content" name="content" type="text/plain" style="height: 500px"></script>   
+                                        </div>
+                                        <!-- 实例化编辑器 -->
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label" for="focusedinput">開店時間</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control1" id="business_hours" name="business_hours" type="text">
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <p class="help-block">
+                                               
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label" for="focusedinput">地址</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control1" id="address" name="address" type="text">
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <p class="help-block">
+                                               
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label" for="focusedinput">latitude(緯度)</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control1" id="latitude" name="latitude" type="text">
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <p class="help-block">
+                                               
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label" for="focusedinput">longitude(經度)</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control1" id="longitude" name="longitude" type="text">
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <p class="help-block">
+                                               
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">
+                                            封面圖
+                                        </label>
+                                        <div class="col-md-2">
+                                            <div class="cover-box">
+                                                <div class="c-box"></div>
+                                            </div>
+                                            <input type="hidden" name="cover" id="cover" value="">
+                                            <button type="button" class="btn btn-box btn-success btn-flat" data-toggle="modal" data-target="#upload-modal"><i class="fa fa-upload"></i>上傳</button>
+                                            <button type="button" id="btn-clear-file" class="btn btn-box btn-danger btn-flat">
+                                            <i class="fa fa-reply"></i>
+                                            清空
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">
+                                            其他圖片
+                                        </label>
+                                        <div class="col-md-6">
+                                            <div class="row" id="imagesPanel">
+                                            </div>
+                                            <div class="dropzone" id="dropzoneImg" style="border: 2px dashed #d2d6de;">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <p class="help-block">
+                                               選擇多個圖像文件（JPEG，PNG等）。
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label" for="focusedinput">狀態</label>
+                                        <div class="col-sm-8">
+                                            發佈&nbsp;&nbsp;<input name="status" type="radio" checked="checked" value="published">&nbsp;&nbsp;&nbsp;&nbsp;草稿&nbsp;&nbsp;<input name="status" type="radio" value="draft">
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <p class="help-block">
+                                                
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label" for="focusedinput">是否推薦</label>
+                                        <div class="col-sm-8">
+                                            是&nbsp;&nbsp;<input name="recommend" type="radio" value="1">&nbsp;&nbsp;&nbsp;&nbsp;否&nbsp;&nbsp;<input name="recommend" type="radio" checked="checked" value="0">
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <p class="help-block">
+                                                
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group filled">
+                                        <label class="col-sm-2 control-label" for="focusedinput">優先級</label>
+                                        <div class="col-sm-8">
+                                                <input class="form-control1" id="grade" name="grade" type="text">
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="row">
+                                            <div class="col-sm-8 col-sm-offset-2">
+                                                <button class="btn btn-info">
+                                                  提交
+                                              </button>
+                                              <button type="button" class="btn btn-warning warning_22" onclick="javascript:history.back(-1);">返回列表</button>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <include file="common/footer" />
+                </div>
+            </div>
+            <!-- /#page-wrapper -->
+        </div>
+ <div class="modal" id="upload-modal" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">上傳文件</h4>
+            </div>
+            <div class="modal-body">
+                <form class="dropzone" id="dropzone" style="border: 2px dashed #d2d6de;">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-dismiss="modal" id="upload-finished">確定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="__PUBLIC__js/dropzone.min.js"></script>
+<script type="text/javascript">
+    if ($('.select2').length > 0) {
+        $('.select2').select2();
+    }
+    file_input = 'cover';
+    $('#upload-finished').click(function () {
+        // window.location.reload();
+    });
+
+    if(typeof(file_success_object) == 'undefined'){
+        file_success_object = '.cover-box .c-box';
+    }
+
+    $("#btn-clear-file").click(function(event) {
+        $("#"+file_input).val('');
+        $(file_success_object).html('');
+    });
+
+
+    Dropzone.options.dropzone = {
+
+        url: "{:U('Upload/upload')}",
+        method: "post",
+        headers: {
+            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr('content')
+        },
+        maxFiles: 1,
+        paramName: "file",
+        maxFilesize: 10,
+        addRemoveLinks:true,
+        dictFileTooBig: "上傳文件太大，無法上傳！",
+        dictResponseError: "上傳文件出錯，請聯繫管理員！",
+        dictDefaultMessage: "拖動文件到此或點擊上傳",
+        dictRemoveFile:"刪除",
+        accept: function (file, done) {
+            done();
+        },
+        success: function (file, done) {
+            // alert(done);
+            // console.dir(done);
+            if(done.code == 1){
+                if(file_input){
+                    $("#"+file_input).val(done.savepath);
+                }
+                
+                $(file_success_object).html('<img src="'+done.photo+'">');
+            }else{
+                console.dir(done);
+                // alert(done.message);
+            }
+            
+        }
+    };
+</script>
+    <script type="text/javascript">
+        Dropzone.options.dropzoneImg = {
+            url: "{:U('Upload/upload')}",
+            method: "post",
+            headers: {
+                "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr('content')
+            },
+            paramName: "file",
+            maxFilesize: 10,
+            
+            addRemoveLinks:true,
+            dictFileTooBig: "上傳文件太大，無法上傳！",
+            dictResponseError: "上傳文件出錯，請聯繫管理員！",
+            dictDefaultMessage: "拖動文件到此或點擊上傳",
+            dictRemoveFile:"刪除",
+            accept: function (file, done) {
+                done();
+            },
+            success: function (file, done) {
+                 console.dir(done);
+                if(done.code == 1){
+                    var imageTxt = "<div class='col-xs-3 col-md-4'>";
+                    imageTxt += "<span class='deletePanel'><i class='fa fa-lg fa-trash'></i></span>";
+                    imageTxt += "<div class='item'>";
+                    imageTxt += "<div class='i-box'><img src='"+ done.photo +"'></div>";
+                    imageTxt += "</div>";
+                  
+                    // /* 圖片id */
+                    imageTxt += '<input type="hidden" name="files[file_id][]" value="'+ done.file_id +'">';
+                    // /* 圖片地址 */
+                    imageTxt += '<input type="hidden" name="files[file_url][]" value="'+ done.savepath +'">';
+                    imageTxt += '<input type="hidden" name="files[post_to_image_id][]" value="0">';
+                    imageTxt += "</div>";
+                    $("#imagesPanel").append(imageTxt);
+                    load_act();
+                    resize_box();
+                }else{
+                    // alert(done.message);
+                } 
+            }
+        };
+
+        
+        /* 刪除 */
+        load_act();
+        function load_act(){
+            $("#imagesPanel>div").hover(function() {
+                $(this).find('.deletePanel').fadeIn();
+            }, function() {
+                $(this).find('.deletePanel').fadeOut();
+            });
+
+            $(".deletePanel").each(function(index, el) {
+                $(this).click(function(event) {
+                    $(this).parent().fadeOut(1000, function() {
+                        $(this).remove();     
+                    });
+                });
+            }); 
+        }
+
+        resize_box();
+        /* 動態改變大小 */
+        function resize_box(){
+            var css_w = $("#imagesPanel>div").css('width');
+            if(css_w){
+                if(css_w.indexOf('px') > -1){
+                var w = $("#imagesPanel>div").width() - 5;
+                }else{
+                    var w = $("#imagesPanel>div").width() / 100 * $(".box-body").width() - 30;
+                }
+                
+                console.log($("#imagesPanel>div").css('width') + "===" + w + "====" +$(".box-body").width() );
+                $(".col-xs-3.col-md-2 .item,.col-xs-3.col-md-2 .i-box").width(w);
+                $(".col-xs-3.col-md-2 .item,.col-xs-3.col-md-2 .i-box").height(w);
+            }
+            
+        }
+
+        $(function() {
+            $(window).resize(function(){
+                resize_box();
+            })
+        });
+    </script>
+        <!-- /#wrapper -->
+        <!-- Nav CSS -->
+        <link href="__PUBLIC__css/custom.css" rel="stylesheet">
+            <!-- Metis Menu Plugin JavaScript -->
+            <script src="__PUBLIC__js/metisMenu.min.js">
+            </script>
+            <script src="__PUBLIC__js/custom.js">
+            </script>
+        </link>
+    </body>
+</html>

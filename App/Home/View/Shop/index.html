@@ -1,0 +1,153 @@
+<include file="common/header" />
+<!--=== End Header ===-->
+
+<style type="text/css">
+    .index_overflow {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .titlesp{
+        /* margin-left: 25px;
+        margin-right: 25px; */
+        margin-top: -20px;
+        padding: 10px;
+        width: 200px;
+        position: relative;
+        background-color: white;
+        box-shadow: darkgrey 0px 0px 6px 2px;
+    }
+    @media (max-width: 768px){
+        body {
+            padding-right: 0px !important;
+             padding-left: 0px!important;;
+        }
+        .container{
+            width: 97%!important;;
+        }
+        .ji{
+            width: 66px!important;
+        }
+        .recent-work{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .recent-work li{
+            margin-right: 0;
+        }
+    }
+</style>
+
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs margin-bottom-40" style="height: auto;">
+    <div class="container" style="padding: 0;">
+        <!-- <h1 class="color-green pull-left">Portfolio</h1> -->
+        <ul class="pull-left breadcrumb" style="display: flex;align-items: center;flex-wrap: wrap;top: 0;padding: 0;margin: 0;">
+            <li><img class="ji" src="/xiahuan/ji.png"/></li>
+            <li><a href="{:U('Index/index')}">首頁</a> <span class="divider">/</span></li>
+            <li>社區商業<span class="divider">/</span></li>
+            <li id="shangye" class="active" style="color: #777;"></li>
+        </ul>
+    </div><!--/container-->
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+<!--=== Content Part ===-->
+<div class="container">
+    <div class="row-fluid">
+        <div id="w">
+            <div class="sort">
+                <!-- 優惠 -->
+                <ul class="unstyled inline" style="display:none;" id="q">
+                    <!-- <li><a href="{:U('Shop/index')}" <if condition="$street_id eq ''">class="selected"</if>>全部</a></li>
+                    <volist name="street" id="street_row">
+                        <li><a href="{:U('Shop/categroy',array('street_id'=>$street_row['id']))}" <if condition="$street_id eq $street_row['id']">class="selected"</if>>{$street_row['name']}</a></li>
+                    </volist> -->
+                </ul>
+                <ul class="unstyled inline" style="display:none;" id="a">
+                    <!-- <li><a href="{:U('Shop/index')}" <if condition="$street_id eq ''">class="selected"</if>>全部</a></li>
+                    <volist name="street" id="street_row">
+                        <li><a href="{:U('Shop/categroy/shoptype/discount',array('street_id'=>$street_row['id']))}" <if condition="$street_id eq $street_row['id']">class="selected"</if>>{$street_row['name']}</a></li>
+                    </volist> -->
+                </ul>
+                <!-- 美食 -->
+                <ul class="unstyled inline" style="display:none;" id="b">
+                    <!-- <li><a href="{:U('Shop/index')}" <if condition="$street_id eq ''">class="selected"</if>>全部</a></li>
+                    <volist name="street" id="street_row">
+                        <li><a href="{:U('Shop/categroy/shoptype/food',array('street_id'=>$street_row['id']))}" <if condition="$street_id eq $street_row['id']">class="selected"</if>>{$street_row['name']}</a></li>
+                    </volist> -->
+                </ul>
+                <!-- 潮店 -->
+                <ul class="unstyled inline" style="display:none;" id="c">
+                    <!-- <li><a href="{:U('Shop/index')}" <if condition="$street_id eq ''">class="selected"</if>>全部</a></li>
+                    <volist name="street" id="street_row">
+                        <li><a href="{:U('Shop/categroy/shoptype/fashion',array('street_id'=>$street_row['id']))}" <if condition="$street_id eq $street_row['id']">class="selected"</if>>{$street_row['name']}</a></li>
+                    </volist> -->
+                </ul>
+
+            </div>
+            <!-- <div class="sort">
+                <ul class="unstyled inline">
+                    <li><a href="{:U('Shop/index')}" <if condition="$street_id eq ''">class="selected"</if>>全部</a></li>
+                    <volist name="street" id="street_row">
+                    <li><a href="{:U('Shop/index',array('street_id'=>$street_row['id']))}" <if condition="$street_id eq $street_row['id']">class="selected"</if>>{$street_row['name']}</a></li>
+                    </volist>
+                </ul>
+            </div> -->
+
+            <ul class="portfolio recent-work clearfix">
+                <volist name="list" id="row">
+                <li >
+                    <a href="{:U('Shop/detail',array('id'=>$row['id']))}"  class="list-a">
+                        <em class="overflow-hidden imgsize"><img src="{$row['cover_width_300']}" alt="" /></em>
+                        <div class="titlesp">
+                            <strong class="index_overflow" style="color: #385A9F;">{$row['title']}</strong>
+                        </div>
+                    </a>
+                </li>
+                </volist>
+            </ul>
+            <div class="pagination pagination-large pagination-centered">
+                <ul>{$page}</ul>
+            </div>
+
+        </div>
+    </div><!--/row-fluid-->
+</div><!--/container-->
+<!--=== End Content Part ===-->
+<script type="text/javascript">
+    // 判断网址包含哪种类型
+        var url = window.location.pathname;
+
+        if(url.indexOf('discount')>= 0){
+            document.getElementById("a").style.display='block';
+            document.getElementById("b").style.display='none';
+            document.getElementById("c").style.display='none';
+        }else if(url.indexOf('food')>= 0){
+            document.getElementById("a").style.display='none';
+            document.getElementById("b").style.display='block';
+            document.getElementById("c").style.display='none';
+        }else if(url.indexOf('fashion')>= 0){
+            document.getElementById("a").style.display='none';
+            document.getElementById("b").style.display='none';
+            document.getElementById("c").style.display='block';
+        }else{
+            document.getElementById("q").style.display='block';
+        }
+
+
+            var u=window.location.pathname;
+            if(url.indexOf('discount')>= 0){
+                document.getElementById("shangye").innerText="優惠";
+            }else if(url.indexOf('food')>= 0){
+                document.getElementById("shangye").innerText="美食";
+            }else if(url.indexOf('fashion')>= 0){
+                document.getElementById("shangye").innerText="潮店";
+            }
+
+
+
+    </script>
+
+<!--=== Footer ===-->
+<include file="common/footer" />

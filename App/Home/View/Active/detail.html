@@ -1,0 +1,400 @@
+<include file="common/header" />
+<style type="text/css">
+    .qrcode {
+        margin-left: -37px;
+        margin-top: -300%;
+    }
+
+    .map {
+        height: 260px;
+        margin-left: 0px !important;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        -webkit-box-shadow: #ccc 4px 4px 4px;
+        -moz-box-shadow: #ccc 4px 4px 4px;
+        box-shadow:#ccc 4px 4px 4px ;
+    }
+
+    .weixin {
+        position: relative;
+
+    }
+
+
+
+    .weixin div.qrcode {
+        position: absolute;
+        z-index: 99;
+        top: -96px;
+        left: -9px;
+        max-width: none;
+        /* transform-origin: top right; */
+        opacity: 0;
+        border: 1px solid #cfd0d1;
+        border-radius: .25rem;
+        -webkit-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+
+    }
+
+    .weixin:hover div.qrcode {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    .line_02 {
+        margin-top: 51px;
+        margin-left:700px;
+        height: 1px;
+        border-top: 1px solid #ddd;
+        text-align: center;
+    }
+
+    .line_02 a {
+        position: relative;
+        top: -35px;
+        background: #fff;
+        padding: 10px 50px;
+    }
+    .title{color: #dddddd;text-align: center;margin-right: -2%;margin-top: 3%;margin-bottom: 3%;}
+    .title:before,.title:after{content: "";width: 15%;border-top: 0.01rem #dddddd solid; display: inline-block;
+        vertical-align: middle;}
+    .title:before{margin-right: 1%;}
+    .title:after{margin-left: 1.5%;}
+
+    .line_02 button {
+        position: relative;
+        top: -15px;
+        background: #fff;
+        /*padding-right: 26px;*/
+        padding: 10px 50px;
+    }
+
+    .active-share-facebook {
+        width: 30px;
+        height: 30px;
+        border: none;
+        background-color: white;
+    }
+    .span{
+        width:461.5px;height:700px;margin-left: 10%;
+    }
+    .headdiv{
+        font-size: 18px;
+        clear: left;
+
+        /*margin: 0 10% 0 10%;*/
+    }
+    .headline{
+        margin: 0px;
+    }
+    .handover{
+        padding: 3px;
+        color: #cc9966;
+        font-size: 18px;
+    }
+    .handover:hover{
+        color:#fcd600;
+        text-decoration: none;
+    }
+    .no{
+        pointer-events:none;
+        color:#ddd;
+        font-size: 18px;
+    }
+
+    @media (max-width: 768px){
+        body {
+            padding-right: 0px !important;
+             padding-left: 0px!important;;
+        }
+        .container{
+            width: 97%!important;;
+        }
+        .ji{
+            width: 66px!important;
+        }
+        .line_02 {
+            margin-left: 0;
+            margin-bottom: 30px;
+        }
+
+        .map {
+            left: 0px;
+            width: 100%;
+            margin: auto;
+        }
+
+        .weixin div.qrcode {
+            left: -33px;
+            margin-top: -145px;
+            position: absolute;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .span5{
+            float: none;
+            margin-top: 0;
+        }
+        .span7 {
+            float: none;
+            width: 374px;
+            height: 523.37px;
+            margin: 0px;
+        }
+    }
+    @media (max-width: 425px){
+        .span7{
+            width: 335;
+            height: 523.37px;
+            margin: 0px;
+        }
+    }
+    @media (max-width: 320px){
+        .span7{
+            width: 280px;
+            height: 391.8px;
+            margin: 0px;
+        }
+    }
+    .cent{
+        text-align: -webkit-center;
+    }
+
+</style>
+<!--=== End Header ===-->
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs margin-bottom-40" style="height: auto;">
+	<div class="container" style="padding: 0;">
+        <ul class="pull-left breadcrumb" style="display: flex;align-items: center;flex-wrap: wrap;top: 0;padding: 0;margin: 0;">
+            <li><img class="ji" src="/xiahuan/ji.png"/></li>
+            <li><a href="{:U('Index/index')}">首頁</a> <span class="divider">/</span></li>
+            <li><a href="{:U('Active/index')}">巡禮活動</a> <span class="divider">/</span></li>
+            <li class="active">{$active['title']}</li>
+
+
+        </ul>
+    </div><!--/container-->
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+
+<!--=== Content Part ===-->
+<div class="container portfolio-item">
+	<div class="row-fluid margin-bottom-20">
+		<!-- Carousel -->
+        <div class="span9">
+        <div style="height: 100%;">
+            <div id="myCarousel" class="carousel slide">
+                <div class="carousel-inner cent">
+                    <if condition="$images">
+                    <volist name="images" key="key" id="row">
+                        <div class="item <if condition='$key eq 1'> active</if>">
+                            <img src="{$row['savepath']}" alt="" />
+                        </div>
+                    </volist>
+                    <else/>
+                    <div class="item active">
+                        <img src="{$active['cover']}" alt="" />
+                    </div>
+                    </if>
+                </div>
+                <div class="carousel-arrow">
+                    <a data-slide="prev" href="#myCarousel" class="left carousel-control"><i class="icon-angle-left"></i></a>
+                    <a data-slide="next" href="#myCarousel" class="right carousel-control"><i class="icon-angle-right"></i></a>
+                </div>
+            </div>
+        </div><!--/span7-->
+        <!-- //End Tabs and Carousel -->
+
+        <div>
+        	<h3 style="color: #385A9F;">{$active['title']}</h3>
+            <p>{$active['content']|htmlspecialchars_decode}</p>
+
+            <ul class="unstyled" style="font-size: 16px">
+            	<if condition="$active['time']">
+                    <li>
+                        <span style="color: #385A9F;width:120px;display: inline-block;vertical-align: top;"><i class="icon-time color-green"></i> 活動時間：</span>
+                        <span style="width:350px;display: inline-block;vertical-align: top;">{$active['time']}</span>
+                    </li>
+                </if>
+            	<li>
+                    <span style="color: #385A9F;width:120px;display: inline-block;vertical-align: top;"><i class="icon-map-marker color-green"></i> 活動地點：</span>
+                    <span style="width:350px;display: inline-block;vertical-align: top;">{$active['address']}</span>
+                </li>
+            	<li>
+                    <span style="color: #385A9F;width:120px;display: inline-block;vertical-align: top;"><i class="icon-tags color-green"></i> 活動簡介：</span>
+                    <span style="width:350px;display: inline-block;vertical-align: top;">{$active['other']}</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div id="allmap" class="span12 map">
+            <script type="text/javascript" src="https://map.qq.com/api/js?v=2.exp&key=EOABZ-6CX65-4UIIM-QRI2W-YEXOO-ORB2Q"></script>
+            
+            <script>
+                var center = new qq.maps.LatLng({$active['latitude']},{$active['longitude']});
+                    var map = new qq.maps.Map(document.getElementById("allmap"), {
+                        center: center,      // 地图的中心地理坐标。
+                        zoom: 30                                                // 地图的中心地理坐标。
+                    });
+                    
+                    //设置Marker自定义图标的属性，size是图标尺寸，该尺寸为显示图标的实际尺寸，origin是切图坐标，该坐标是相对于图片左上角默认为（0,0）的相对像素坐标，anchor是锚点坐标，描述经纬度点对应图标中的位置
+                    var anchor = new qq.maps.Point(25, 45),
+                            size = new qq.maps.Size(42, 50),
+                            origin = new qq.maps.Point(0, 0),
+                            icon = new qq.maps.MarkerImage(
+                                    "__HOME_PUBLIC__img/biaozhu.png",
+                                    size,
+                                    origin,
+                                    anchor
+                            );
+                    var marker = new qq.maps.Marker({
+                        map: map,
+                        position: center,    
+                    });
+                    marker.setIcon(icon);
+                   
+            </script>
+        </div>
+            <div class="footer-share">
+                <a class="social weixin" href="javascript:">
+                    <div class="qrcode" id="qrcode"></div>
+                <button type="button" class="footer-share-wechat" style="background-image: url(__HOME_PUBLIC__img/footer/IC-200-WeChat.png);background-size:30px 30px;"></button>
+                </a>
+
+                <br>
+                <button type="button" class="footer-share-weibo" style="background-image: url(__HOME_PUBLIC__img/footer/IC-200-WB.png);background-size:30px 30px;"
+                        onclick="shareWeibo()"></button>
+                <br>
+                <button type="button" class="footer-share-facebook" style="background-image: url(__HOME_PUBLIC__img/footer/IC-200-facebook.png);background-size:30px 30px;" onclick="shareFacebook()"></button>
+
+            </div>
+		<!--<div class="title">
+			<a class="social weixin" href="javascript:">
+				<div class="qrcode" id="qrcode"></div>
+				<svg t="1628480769448" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8759" width="32" height="32"><path d="M302.787561 407.585224a37.1 37.1 0 1 0 72.214041-17.052045 37.1 37.1 0 1 0-72.214041 17.052045Z" p-id="8760" fill="#707070"></path><path d="M512 0C230.4 0 0 230.4 0 512s230.4 512 512 512 512-230.4 512-512S793.6 0 512 0z m-87.24 683.75c-33.7 0-65.84-5.66-95.2-15.9l-83.11 45.57 25.1-74.03c-59.59-39.07-97.99-100.39-97.99-169.35 0-118.03 112.47-213.71 251.21-213.71 122.97 0 225.28 75.16 246.96 174.43-3.41-0.12-6.83-0.2-10.27-0.2-126.04 0-228.22 86.64-228.23 193.51 0 20.6 3.81 40.44 10.84 59.06-6.38 0.41-12.81 0.62-19.31 0.62z m358.31 87.68l21.08 62.17-72.52-39.77c-21.96 6.53-45.57 10.09-70.17 10.09-117.14 0-212.1-80.52-212.1-179.84s94.96-179.84 212.1-179.84 212.1 80.52 212.1 179.84c0 60.95-35.77 114.82-90.49 147.35z" p-id="8761" fill="#707070"></path><path d="M595.2 568.57m-29.7 0a29.7 29.7 0 1 0 59.4 0 29.7 29.7 0 1 0-59.4 0Z" p-id="8762" fill="#707070"></path><path d="M511.46 436.18c20.49 0 37.1-16.61 37.1-37.1s-16.61-37.1-37.1-37.1c-20.48 0-37.09 16.61-37.1 37.1 0 20.49 16.61 37.1 37.1 37.1z" p-id="8763" fill="#707070"></path><path d="M733.38 568.57m-29.7 0a29.7 29.7 0 1 0 59.4 0 29.7 29.7 0 1 0-59.4 0Z" p-id="8764" fill="#707070"></path></svg>
+			</a>
+			<button type="button" class="active-share-facebook" onclick="shareFacebook()">
+				<svg t="1628480645627" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2921" width="32" height="32"><path d="M588.288 998.912V651.776h114.176l17.408-137.728H588.288v-88.064c0-22.528 4.608-38.912 13.312-50.176 9.216-11.264 26.112-16.896 52.224-16.896h70.656V235.52c-24.064-3.584-58.368-5.632-102.4-5.632-51.712 0-93.184 15.872-124.416 47.616s-46.592 76.8-46.592 134.656v101.376H336.384v137.728H450.56v349.696C207.36 970.752 18.944 763.392 18.944 512c0-272.384 220.672-493.568 493.568-493.568S1006.08 239.104 1006.08 512c0 246.784-181.248 450.56-417.792 486.912z m-75.264 6.656H512h1.024z" p-id="2922" fill="#707070"></path></svg>
+			</button>
+		</div>-->
+        <div class="headdiv">
+            <span style="width: 100%;display: inline-block;">上一篇：
+                <if condition="$before['title'] neq NULL">
+                    <a href="{:U(Active/detail,array('id'=>$before['id']))}" class="handover">{$before['title']}</a>
+                <else />
+                    <a class="no">無</a>
+                </if>
+            </span>
+            <span>下一篇：
+                <if condition="$later['title'] neq NULL">
+                    <a href="{:U(Active/detail,array('id'=>$later['id']))}" class="handover">{$later['title']}</a>
+                <else />
+                    <a class="no">無</a>
+                </if>
+            </span>
+        </div>
+
+
+
+	<!-- Recent Works -->
+    <!--<div class="headline">
+        <h3>其他活動</h3>
+        <div class="recent-work-btn">
+            <div class="swiper-button-prev recent-work-prev"></div>
+            <div class="swiper-button-next recent-work-next"></div>
+        </div>
+    </div>
+    <div class="row-fluid margin-bottom-40 swiper-container">
+        <ul class="recent-work swiper-wrapper">
+            <volist name="re_active" id="active_row">
+            <li class="swiper-slide" style="height:250px;">
+                <a href="{:U(Active/detail,array('id'=>$active_row['id']))}">
+                	<em class="overflow-hidden"><img style="height:180px;" src="{$active_row['cover']}" alt="" /></em>
+                    <span>
+                        <strong style="width:265px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{$active_row['title']}</strong>
+                        <i></i>
+                    </span>
+                </a>
+            </li>
+            </volist>
+        </ul>
+
+	</div>--><!--/row-->
+    </div>
+        <include file="common/page_right" />
+    </div>
+	<!-- //End Recent Works -->
+
+</div><!--/container-->
+
+
+<!--=== End Content Part ===-->
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=YucscdufpGHjsbbnhrjhrLBWFWsulcMq&s=1"></script>
+<script type="text/javascript" src="../../../../xiahuan/Public/Static/Home/js/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../xiahuan/Public/Static/Home/js/qrcode.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../xiahuan/Public/Static/Home/js/qrcodebox-master/qrcodebox/css/qrcode.box.css">
+<script src="../../../../xiahuan/Public/Static/Home/js/qrcodebox-master/qrcodebox/js/jquery.min.js"></script>
+<script src="../../../../xiahuan/Public/Static/Home/js/qrcodebox-master/qrcodebox/js/jquery.qrcode.js"></script>
+<script src="../../../../xiahuan/Public/Static/Home/js/qrcodebox-master/qrcodebox/js/qrcode.js"></script>
+<script src="../../../../xiahuan/Public/Static/Home/js/qrcodebox-master/qrcodebox/js/jquery.qrcode.box.js"></script>
+<!-- <script src="../../../../Public/Static/Home/js/qrcode.min.js"></script> -->
+<script type="text/javascript">
+	//分享二维码
+	var wz = "http://macauonline.net/xiahuan/Active/detail/id/{$active['id']}.html"
+	var qrcode = new QRCode(document.getElementById("qrcode"), wz); // 设置要生成二维码的链接
+	$(".qrcode").qrcodeBox({
+		title: "分享到微信朋友圈",
+		des: "“扫一扫” 即可分享",
+		width: 128,
+		height: 128,
+		qrcodeText: wz,
+		offsetX: 70,
+		offsetY: 100
+	});
+</script>
+
+<script>
+	
+    
+
+
+window.onload = function() {
+    var mySwiper = new Swiper ('.swiper-container', {
+    slidesPerView : 4,
+    slidesPerGroup : 4,
+    spaceBetween : 10,
+    breakpoints: {
+        1024: {
+        slidesPerView : 4,
+        slidesPerGroup : 4,
+        spaceBetween : 10,
+        },
+        768: {
+        slidesPerView: 3,
+        slidesPerGroup : 3,
+        spaceBetween : 10,
+        },
+        640: {
+        slidesPerView: 2,
+        slidesPerGroup : 2,
+        spaceBetween : 10,
+        },
+        460: {
+        slidesPerView: 1,
+        slidesPerGroup : 1,
+        }
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  })
+}
+
+
+
+</script>
+<!--=== Footer ===-->
+<include file="common/footer" />

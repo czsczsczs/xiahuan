@@ -1,0 +1,102 @@
+<include file="common/header" />
+
+        <div id="page-wrapper">
+        <div class="graphs">
+        <div class="xs">
+         <h3 id="title">管理員列表</h3>
+        </div>
+        <div class="col-md-12 inbox_right">
+          
+            <div class="mailbox-content">
+              <if condition="$ext_user['is_admin'] == 1">
+                <div class="mail-toolbar clearfix">
+                     <div class="float-left">
+                        <div class="dropdown">
+                          <a href="{:U('Admin/add')}"><button type="button" class="btn btn-info">新增</button></a>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+              </if>
+                <table class="table">
+                    <thead>
+                        <tr class="unread checked">
+                            <td id="thead_td">ID</td>
+                            <td id="thead_td">名稱</td>
+                            <td id="thead_td">郵箱</td>
+                            <td id="thead_td">等級</td>
+                            <td id="thead_td">創建時間</td>
+                            <td id="thead_td">操作</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <volist name="list" id="row">
+                        <tr class="unread checked">
+                            <td class="hidden-xs">{$row.id}</td>
+                            <td class="hidden-xs">{$row.username}</td>
+                            <td class="hidden-xs">{$row.email}</td>
+                            <td class="hidden-xs">{$row.is_admin_}</td>
+                            <td class="hidden-xs">{$row.created|date="Y-m-d H:i:s",###}</td>
+                            <td>
+                                <div class="dropdown">
+                                  <if condition="$ext_user['is_admin'] != 1">
+                                    <if condition="$ext_user['is_admin'] == $row['is_admin'] ">
+                                      <a href="{:U('Admin/edit',array('id'=>$row['id']))}"><button type="button" class="btn btn-info">查看編輯</button></a>
+                                    
+                                      <a onclick="deleted({$row['id']})"><button type="button" class="btn btn-danger">刪除</button></a>
+                                 </if>
+                               <else/>
+                                <a href="{:U('Admin/edit',array('id'=>$row['id']))}"><button type="button" class="btn btn-info">查看編輯</button></a>
+                                    
+                                      <a onclick="deleted({$row['id']})"><button type="button" class="btn btn-danger">刪除</button></a>
+                              </if>
+                              </div>
+                            </td>
+                        </tr>
+                        </volist>
+                    </tbody>
+                </table>
+               </div>
+               <ul class="paginList pager"><!-- 分页显示 -->{$page}</ul>
+            </div>
+            <div class="clearfix"> </div>
+       </div>
+
+       <include file="common/footer" />
+   </div>
+      </div>
+      <!-- /#page-wrapper -->
+   </div>
+    <!-- /#wrapper -->
+<!-- Nav CSS -->
+<!-- Metis Menu Plugin JavaScript -->
+<script>
+    function deleted(id) {
+        //弹出提示，是否确定删除
+        if (confirm("确定要删除吗？")) {
+           
+            $.ajax({
+                url: "{:U('Admin/destroy')}",
+                type: "post",
+                dataType: "json",
+                data: {id: id},
+                success: function (msg) {
+                    //ajax成功返回数据要执行的代码
+                    if(msg.status == 405){
+                      alert(msg.message);
+                      return false
+                    }
+                    if(msg.status == 403){
+                      alert(msg.message);
+                      return false
+                    }else{
+                      location.reload(true);
+                    }
+                    
+                }
+            });
+        }
+    }
+</script>
+</body>
+</html>

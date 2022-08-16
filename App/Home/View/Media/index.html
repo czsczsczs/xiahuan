@@ -1,0 +1,290 @@
+<include file="common/header" />
+<!--=== End Header ===-->
+<style type="text/css"> 
+    .ji{
+            width: 66px;
+        }
+   .newul{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        top: 0;
+   }
+   .breadcrumbs{
+       height: auto;
+   }
+   .container{
+       padding: 0!important;
+   }
+   .titlesp{
+        margin-left: 90px;
+        margin-right: 90px;
+        margin-top: -20px;
+        width: 200px;
+        position: relative;
+        background-color: white;
+       
+    }
+	.recent-work li:hover{
+		box-shadow: darkgrey 0px 0px 6px 2px;
+	}
+	.recent-work li:hover .titlesp{
+        /* border-bottom: 2px solid #385A9F; */
+		box-shadow: #385A9F 0px 6px 6px 2px;
+    }
+
+	.memod {
+		margin-top: -25px;
+		box-shadow: #385a9f 0px 0px 6px 1px;
+		border: 1px solid #385A9F;
+		font-size: 15px;
+		border-bottom: 1px solid #385A9F !important;
+	}
+	
+	.qrcode {
+		margin-left: -37px;
+		margin-top: -300%;
+	}
+
+	.map {
+		width: 40%;
+		height: 300px;
+		margin-left: 15px;
+		top: 20px;
+		left: 30px;
+	}
+
+	.weixin {
+		position: relative;
+		top: 0.86rem;
+	}
+
+
+
+	.weixin div.qrcode {
+		position: absolute;
+		z-index: 99;
+		top: -6px;
+		left: -120px;
+		max-width: none;
+		transform-origin: top right;
+		opacity: 0;
+		border: 1px solid #DDDDDD;
+		border-radius: .25rem;
+		-webkit-transition: all .4s ease-in-out;
+		-o-transition: all .4s ease-in-out;
+		transition: all .4s ease-in-out;
+
+	}
+
+	.weixin:hover div.qrcode {
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	.line_02 {
+		margin-top: 51px;
+		/* margin-left: 362px;margin-right: 362px; */
+		height: 1px;
+		border-top: 1px solid #ddd;
+		text-align: center;
+	}
+	.line_02 a {
+		position: relative;
+		top: -15px;
+		background: #fff;
+		padding: 0 20px;
+	}
+
+	.line_02 button {
+		position: relative;
+		top: -15px;
+		background: #fff;
+		padding-right: 26px;
+	}
+
+	.active-share-facebook {
+		width: 30px;
+		height: 30px;
+		border: none;
+		background-color: white;
+	}
+
+	#tag {
+		display: flex;
+		position: relative;
+		left: -40px;
+		float: left;
+	}
+	
+	@media screen and (max-width: 600px) {
+		#tag {
+			display: flex;
+			position: relative;
+			left: -10px;
+			float: left;
+		}
+	}
+
+	#tag li {
+		width: 120px;
+		height: 32px;
+		padding-top: 5px;
+		border-radius: 6px !important;
+		border: 1px solid rgb(56 90 159);
+		margin-left: 20px;
+		color: rgb(56 90 159);
+		font-size: 16px;
+		list-style-type: none;
+		text-align: center;
+
+	}
+	
+	@media (max-width: 768px) {
+		#tag {
+			transform: scale(0.8);
+			display: flex;
+			margin-left: -30px;
+		}
+
+		.line_02 {
+			margin-bottom: 30px;
+		}
+
+		.weixin div.qrcode {
+			margin-top: -145px;
+			position: absolute;
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		.newproimg li {
+			width: 100%;
+		}
+
+		.titlesp {
+		margin-left: 25px;
+		margin-right: 25px;
+		margin: 0 auto;
+		margin-top: -20px;
+		width: 70%;
+		position: relative;
+		background-color: white;
+		box-shadow: darkgrey 0px 0px 6px 2px;
+		/* margin: 0 auto; */
+		}
+	}
+	.meindeximg{
+		width: 410px;
+		height: 290px;
+	}
+	.meinmg{
+		height: auto !important;
+	}
+	@media screen and (min-width: 980px) and (max-width: 1199px) {
+		.meindeximg{
+		    width: 310px;
+    		height: 230px;
+	}
+	.titlesp{
+        margin-left: 45px;
+        margin-right: 45px;
+    }
+	}
+	@media screen and (max-width: 979px) {
+		.meindeximg{
+		    width: auto;
+    		height: auto;
+	}
+	}
+</style>
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs margin-bottom-40">
+	<div class="container">
+		<!-- <h1 class="color-green pull-left">Portfolio</h1> -->
+		<ul class="pull-left breadcrumb newul">
+			<li><img class="ji" src="/xiahuan/ji.png"/></li>
+			<li><a href="{:U('Index/index')}">首頁</a> <span class="divider">/</span></li>
+			<li class="active" style="color: #555;">精彩瞬間</li>
+		</ul>
+	</div>
+	<!--/container-->
+</div>
+<!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+<!--=== Content Part ===-->
+<!-- <ul id="myTab" class="nav nav-tabs">
+	<li class="active"><a href="#photo" data-toggle="tab">圖片集</a></li>
+	<li><a href="#video" data-toggle="tab">視頻影集</a></li>
+</ul>
+<div id="myTabContent" class="tab-content">
+	<div class="tab-pane fade in active" id="photo">
+
+	</div>
+	<div class="tab-pane fade" id="video">
+	</div>
+</div> -->
+
+<!--/container-->
+<!--=== End Content Part ===-->
+<!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+<!--=== Footer ===-->
+		<div class="container">
+				<ul id="tag">
+					<li style="background-color:#385A9F;"><a style="color: white;text-decoration:none;" href="{:U('Media/index')}">圖片集</a></li>
+					<li><a style="color: #385A9F;text-decoration:none;" href="{:U('Media2/index')}">視頻集</a></li>
+				</ul>
+			<div class="row-fluid">
+				<div id="w" class="span9">
+
+					<ul class="portfolio recent-work clearfix newproimg">
+						<volist name="list" id="row">
+							<li data-id="id-1" class="street{$row['street_id']}">
+								<a href="{:U('Media/detail',array('id'=>$row['id']))}">
+									<em class="overflow-hidden meindeximg"><img class="meinmg" src="{$row['cover']}" alt="" /></em>
+									<span class="titlesp memod" style="transition: all 0s">
+										<strong style="color: #385A9F;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{$row['title']}</strong>
+									</span>
+								</a>
+							</li>
+						</volist>
+					</ul>
+					<div class="pagination pagination-large pagination-centered">
+						<ul>{$page}</ul>
+					</div>
+				</div>
+				<include file="common/page_right_me" />
+			</div>
+			<!--/row-fluid-->
+		</div>
+		<!-- <div class="container" style="display:none;">
+
+			<div class="row-fluid">
+				<div id="w">
+					<ul class="portfolio recent-work clearfix">
+						<volist name="list" id="row">
+							<li data-id="id-1" class="street{$row['street_id']}">
+								<a href="{:U('Media/detail',array('id'=>$row['id']))}">
+									<em class="overflow-hidden imgsize"><img src="{$row['cover_width_300']}" alt="" /></em>
+									<span>
+										<strong style="width:250px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{$row['title']}</strong>
+									</span>
+								</a>
+							</li>
+						</volist>
+					</ul>
+					<div class="pagination pagination-large pagination-centered">
+						<ul>{$page}</ul>
+					</div>
+				</div>
+			</div>
+
+		</div> -->
+
+
+	
+	<include file="common/footer" />

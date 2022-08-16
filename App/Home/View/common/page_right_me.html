@@ -1,0 +1,159 @@
+<style type="text/css">
+    @media screen and (min-width: 768px) {
+        .span3{
+                margin-top: -100px;
+            }
+    }
+    
+    .btn {
+        display: block;
+        position: relative;
+        background: #adadad;
+        padding: 5px;
+        color: #fff;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .margin-top{
+        margin-top:20px;
+    }
+    .searchx {
+        width: 24px;
+        max-width: 24px !important;
+    }
+    .butt{
+        background-color: unset;
+        border: 2px solid #385A9F;
+    }
+    .downxian{
+        margin-top: 30px !important;
+        margin-bottom: 60px !important;
+        border-bottom: 2px solid #cbcbcb;
+    }
+    
+</style>
+<div class="span3">
+            <!-- Search Bar -->
+            <!-- <div class="headline"><h3 class="headh3" style="color: #385A9F">搜索內容</h3></div>
+            <div class="input-append  margin-top">
+                <form action="{:U('Search/index')}" method="get">
+                    <input style="border: 2px solid #385A9F;border-right: unset;" type="text" name="keyword" class="span9" value="搜索關鍵詞"/>
+                    <button class="butt" type="submit">
+                        <img class="searchx search-btn" src="/xiahuan/Public/Static/Home/img/xun.png">
+                    </button>
+                </form>
+
+            </div> -->
+
+            <!-- Posts -->
+            <div class="posts margin-bottom-20">
+                <div class="headline"><h3 style="color: #385A9F">巡禮活動</h3></div>
+                <volist name="new_active" id="active">
+                    <a href="{:U('Active/detail',array('id'=>$active['id']))}"><dl class="dl-horizontal">
+                        <dt><img src="{$active['cover']}" alt="" /></dt>
+                        <dd>
+                            <p>{$active['title']}</p>
+                        </dd>
+                    </dl></a>
+                </volist>
+                <a href="{:U('Active/index')}"><h5 style="color: #385A9F;float: right;">查看更多》</h5></a>
+                <div class="headline downxian"></div>
+            </div><!--/posts-->
+
+
+
+                <div class="posts margin-bottom-20">
+                    <div class="headline"><h3 style="color: #385A9F">新聞資訊</h3></div>
+                    <volist name="new_news" id="new">
+                        <a href="{:U('News/detail',array('id'=>$new['id']))}"><dl class="dl-horizontal">
+                            <dt><img src="{$new['cover']}" alt="" /></dt>
+                            <dd>
+                                <p>{$new['title']}</p>
+                            </dd>
+                        </dl></a>
+                    </volist>
+                    <a href="{:U('News/index')}"><h5 style="color: #385A9F;float: right;">查看更多》</h5></a>
+                    <div class="headline downxian"></div>
+                </div>
+    <!-- Posts -->
+    <!--<div class="posts margin-bottom-20">
+        <div class="headline"><h3>圖集推薦</h3></div>
+        <volist name="new_media" id="media">
+            <dl class="dl-horizontal">
+                <dt><a href="{:U('Media/detail',array('id'=>$media['id']))}"><img src="{$media['cover']}" alt="" /></a></dt>
+                <dd>
+                    <p><a href="{:U('Media/detail',array('id'=>$media['id']))}">{$media['title']}</a></p>
+                </dd>
+            </dl>
+        </volist>
+    </div>-->
+    <!--/posts-->
+
+
+
+
+    <!-- Posts -->
+   <!-- <div class="posts margin-bottom-20">
+        <div class="headline"><h3>視頻集推薦</h3></div>
+        <volist name="new_media2" id="media2">
+            <dl class="dl-horizontal">
+                <dt><a href="{:U('Media2/detail',array('id'=>$media2['id']))}"><img src="{$media2['cover']}" alt="" /></a></dt>
+                <dd>
+                    <p><a href="{:U('Media2/detail',array('id'=>$media2['id']))}">{$media2['title']}</a></p>
+                </dd>
+            </dl>
+        </volist>
+    </div>-->
+    <!--/posts-->
+            <!-- Posts -->
+            <!--<div class="posts margin-bottom-20">
+                <div class="headline"><h3 style="color: #385A9F">新聞資訊</h3></div>
+                <volist name="right_data" id="right_data_row">
+                <dl class="dl-horizontal">
+                    <dt>
+                        <if condition="$right_data_row['type'] eq 'shop'">
+                        <a href="{:U('Shop/detail',array('id'=>$right_data_row['id']))}">
+                        <elseif condition="$right_data_row['type'] eq 'posts'"/>
+                        <a href="{:U('Posts/detail',array('id'=>$right_data_row['id']))}">
+                        <else/>
+                        <a href="{:U('StreetHistory/detail',array('id'=>$right_data_row['id']))}">
+                        </if>
+                        <img src="{$right_data_row['cover_width_300']}" alt="" />
+                        </a>
+                    </dt>
+                    <dd>
+                        <p>
+                        <if condition="$right_data_row['type'] eq 'shop'">
+                        <a href="{:U('Shop/detail',array('id'=>$right_data_row['id']))}">
+                        <elseif condition="$right_data_row['type'] eq 'posts'"/>
+                        <a href="{:U('Posts/detail',array('id'=>$right_data_row['id']))}">
+                        <else/>
+                        <a href="{:U('StreetHistory/detail',array('id'=>$right_data_row['id']))}">
+                        </if>{$right_data_row['title']}</a>
+                        </p>
+                    </dd>
+                </dl>
+                </volist>
+                <div class="headline"><h4 style="color: #385A9F;float: right;">查看更多》</h4></div>
+
+            </div>-->
+    <!--/posts-->
+<!--            <a class="btn" href="#" onClick="javascript :history.back(1);">返回總覽</a>-->
+
+            <!-- Photo Stream -->
+            <!-- <div class="headline"><h3>社區美圖</h3></div>
+            <ul class="unstyled blog-ads">
+                <li><a href="photo_details.html"><img src="__HOME_PUBLIC__img/sliders/elastislide/5.jpg" alt="" class="hover-effect" /></a></li>
+                <li><a href="photo_details.html"><img src="__HOME_PUBLIC__img/sliders/elastislide/6.jpg" alt="" class="hover-effect" /></a></li>
+                <li><a href="photo_details.html"><img src="__HOME_PUBLIC__img/sliders/elastislide/8.jpg" alt="" class="hover-effect" /></a></li>
+                <li><a href="photo_details.html"><img src="__HOME_PUBLIC__img/sliders/elastislide/10.jpg" alt="" class="hover-effect" /></a></li>
+                <li><a href="photo_details.html"><img src="__HOME_PUBLIC__img/sliders/elastislide/11.jpg" alt="" class="hover-effect" /></a></li>
+                <li><a href="photo_details.html"><img src="__HOME_PUBLIC__img/sliders/elastislide/1.jpg" alt="" class="hover-effect" /></a></li>
+                <li><a href="photo_details.html"><img src="__HOME_PUBLIC__img/sliders/elastislide/2.jpg" alt="" class="hover-effect" /></a></li>
+                <li><a href="photo_details.html"><img src="__HOME_PUBLIC__img/sliders/elastislide/7.jpg" alt="" class="hover-effect" /></a></li>
+            </ul> -->
+
+            <!-- Blog Tags -->
+
+        </div>

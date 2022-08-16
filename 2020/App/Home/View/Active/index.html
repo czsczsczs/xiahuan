@@ -1,0 +1,50 @@
+<include file="common/header" />
+<!--=== End Header ===-->
+
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs margin-bottom-40">
+	<div class="container">
+        <!-- <h1 class="color-green pull-left">Portfolio</h1> -->
+        <ul class="pull-right breadcrumb">
+            <li><a href="{:U('Index/index')}">首頁</a> <span class="divider">/</span></li>
+            <li class="{:U('Active/index')}">社區活動</li>
+        </ul>
+    </div><!--/container-->
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+
+<!--=== Content Part ===-->
+<div class="container"> 	
+	<div class="row-fluid"> 
+        <div id="w"> 
+            <ul class="thumbnails activity ulc">
+                <volist name="list" id="row">
+            	<li class="span3" link="{:U('Active/detail',array('id'=>$row['id']))}" >
+            		<div class="thumbnail-style thumbnail-kenburn">
+            			<div class="thumbnail-img">
+            				<div class="overflow-hidden imgsize"><img src="{$row['cover']}" alt="" /></div>
+            				<a class="btn-more hover-effect" href="{:U('Active/detail',array('id'=>$row['id']))}">閱讀更多+</a>					
+            			</div>
+            			<h3 style=" white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
+            				<a class="hover-effect" href="{:U('Active/detail',array('id'=>$row['id']))}" title="{$row['title']}">{$row['title']}</a>
+            			</h3>
+                        <if condition="$row['time']">
+            			<p style=" white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">活動時間：{$row['time']}</p>
+                        <else/>
+                        <p>活動時間:無</p>
+                        </if>
+            			<p style=" white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">活動地點：{$row['address']}</p>
+            		</div>
+            	</li>
+                </volist>
+            </ul><!--/thumbnails-->
+            <div class="pagination pagination-large pagination-centered">
+                <ul>{$page}</ul>
+            </div>
+        </div>                
+    </div><!--/row-fluid-->         
+</div><!--/container-->	 	
+<!--=== End Content Part ===-->
+
+<!--=== Footer ===-->
+<include file="common/footer" />

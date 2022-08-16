@@ -1,0 +1,141 @@
+<include file="common/header" />
+<!--=== End Header ===-->
+<style type="text/css">
+    #index_overflow {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .sli{
+        border-bottom: 1px solid #c2c2c2;
+        padding-bottom: 20px;
+    }
+    .txtstyle{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-indent: 28px;
+        font-size: 15px;
+        text-align: -webkit-left;
+    }
+    .recent-work img {
+        height: unset !important;
+    }
+    .ppp{
+        text-align-last: right;
+        margin-top: 9%;
+    }
+    @media screen and (min-width: 767px) {
+
+        .ulhe {
+            height: 1030px;
+            overflow: auto;
+            padding-right: 15px;
+        }
+        .sli{
+            height: 220px;
+        }
+        .ulhe::-webkit-scrollbar {/*滚动条整体样式*/
+            width: 8px;     /*高宽分别对应横竖滚动条的尺寸*/
+            height: 1px;
+        }
+
+        .ulhe::-webkit-scrollbar-thumb{/*滚动条里面小方块*/
+            border-radius: 10px;
+            box-shadow: inset 0 0 5px rgba( 0, 0, 0, .1);
+            background: #d3d3d3;
+        }
+
+        .ulhe::-webkit-scrollbar-track{/*滚动条里面轨道*/
+            box-shadow: inset 0 0 5px rgba( 0, 0, 0, .1);
+            border-radius: 10px;
+            background: #EDEDED;
+        }
+
+    }
+    @media (max-width: 768px){
+        body {
+            padding-right: 0px !important;
+             padding-left: 0px!important;;
+        }
+        .container{
+            width: 97%!important;;
+        }
+        .ji{
+            width: 66px!important;
+        }
+    }
+</style>
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs margin-bottom-40" style="height: auto;">
+	<div class="container" style="padding: 0;">
+        <!-- <h1 class="color-green pull-left">Portfolio</h1> -->
+        <ul class="pull-left breadcrumb" style="display: flex;align-items: center;flex-wrap: wrap;top: 0;padding: 0;margin: 0;">
+            <li><img class="ji" src="/xiahuan/ji.png"/></li>
+            <li><a href="{:U('Index/index')}">首頁</a> <span class="divider">/</span></li>
+            <li>社區魅力<span class="divider">/</span></li>
+            <li class="active" style="color: #777;">街道故事</li>
+        </ul>
+    </div><!--/container-->
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+
+<!--=== Content Part ===-->
+<div class="container">
+	<div class="row-fluid">
+        <div class="span9" id="w">
+            <!-- <div class="sort" id="sort">
+				<ul class="unstyled inline">
+                	<li><a href="#" class="all selected">全部</a></li> -->
+                    <!-- <volist name="street_list" id="street">
+                	   <li><a href="#" class="street{$street['id']}">{$street['name']}</a></li>
+                	</volist> -->
+            <!--     </ul>
+            </div> -->
+
+            <ul class="portfolio recent-work clearfix ulhe">
+                <volist name="list" id="row">
+                    <li class="swiper-slide sli" link="{:U('StreetHistory/detail',array('id'=>$row['id']))}">
+                        <div class="thumbnail-style newthumb">
+                            <div class="thumbnail-img" style="width: 100%;">
+                                <img style="width: 35%;" src="{$row['cover_width_300']}" alt="" />
+                                <div style="width: 60%;float:right;">
+                                    <h3 style="text-align-last: left;" id="index_overflow" title="{$row['title']}">
+                                        <a style="color: #385A9F;" class="hover-effect txtstyle" href="{:U('StreetHistory/detail',array('id'=>$row['id']))}">{$row['title']}</a>
+                                    </h3>
+
+                                    <p>
+                                    <div class="txtstyle">
+                                        {$row['content']|htmlspecialchars_decode}
+                                    </div>
+                                    </p>
+
+                                    <p class="ppp" id="index_overflow"><a style="text-decoration:none;" class="pull-right" href="{:U('StreetHistory/detail',array('id'=>$row['id']))}"><img style="max-width: 25px;" src="/xiahuan/Public/Static/Home/img/eye.png">查看詳情</a></p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </li>
+                </volist>
+            </ul>
+            <!--<div class="pagination pagination-large pagination-centered">
+                <ul>{$page}</ul>
+            </div>-->
+        </div>
+        <include file="common/page_right2" />
+    </div><!--/row-fluid-->
+</div><!--/container-->
+<!--=== End Content Part ===-->
+<script type="text/javascript">
+
+    var html = document.getElementById("txt").innerText;
+    var str=html.replace(/[^\u4e00-\u9fa5]/g,"");
+    document.getElementById("txt").innerHTML=str;
+
+</script>
+<!--=== Footer ===-->
+<include file="common/footer" />

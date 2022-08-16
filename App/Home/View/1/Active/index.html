@@ -1,0 +1,116 @@
+<include file="common/header" />
+<!--=== End Header ===-->
+<style type="text/css">
+	#index_overflow {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	.titlecolor{
+		color:#385A9F;
+		text-decoration:none !important;
+	}
+	.borderbottom{
+		border-bottom: unset !important;
+	}
+	.aac:hover{
+		text-decoration:none !important;
+	}
+	.txtstyle{
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		text-indent: 28px;
+	}
+    @media screen and (min-width: 1200px) {
+        .swiper-slide {
+            width: 520px !important;
+        }
+        /* 第一个块偏移调整 */
+        .swiper-slide-active{
+            margin-left: 30px !important;
+        }
+    }
+    @media screen and (min-width: 980px) and (max-width: 1199px){
+        .swiper-slide {
+            width: 430px !important;
+        }
+        /* 第一个块偏移调整 */
+        .swiper-slide-active{
+            margin-left: 20px !important;
+        }
+    }
+    @media screen and (min-width: 768px) and (max-width: 979px){
+        .swiper-slide {
+            width: 327px !important;
+        }
+    }
+    @media (max-width: 768px){
+        body {
+            padding-right: 0px !important;
+             padding-left: 0px!important;;
+        }
+        .container{
+            width: 97%!important;;
+        }
+        .ji{
+            width: 66px!important;
+        }
+    }
+
+</style>	
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs margin-bottom-40" style="height: auto;">
+	<div class="container" style="padding: 0;">
+        <!-- <h1 class="color-green pull-left">Portfolio</h1> -->
+        <ul class="pull-left breadcrumb" style="display: flex;align-items: center;flex-wrap: wrap;top: 0;padding: 0;margin: 0;">
+			<li><img class="ji" src="/xiahuan/ji.png"/></li>				
+            <li><a href="{:U('Index/index')}">首頁</a> <span class="divider">/</span></li>
+            <li class="{:U('Active/index')}">巡禮活動</li>
+        </ul>
+    </div><!--/container-->
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+
+<!--=== Content Part ===-->
+<div class="container"> 	
+	<div class="row-fluid"> 
+        <div id="w" class="swiper-container swiper-con-acindex">
+            <ul class="swiper-wrapper thumbnails ulc">
+                <volist name="list" id="row">
+            	<li class="span6 swiper-slide" link="{:U('Active/detail',array('id'=>$row['id']))}" >
+            		<div class="thumbnail-style activethumb">
+            			<div class="thumbnail-img">
+            				<img style="width: 100%;" src="{$row['cover']}" alt="" />					
+            			</div>
+												 
+            			<div class="activemodel">
+            			<h3 style="color:#385A9F;text-align: center;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
+            				<a class="hover-effect" href="{:U('Active/detail',array('id'=>$row['id']))}" title="{$row['title']}">{$row['title']}</a>
+            			</h3>
+                        <if condition="$row['time']">
+            			<p id="index_overflow" style=" white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><span style="color:#385A9F;">活動時間：</span></p>
+                        <p>{$row['time']}</p>
+                        <else/>
+                        <p>活動時間:無</p>
+                        </if>
+            			<p id="index_overflow" style=" white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><span style="color:#385A9F;">活動地點：</span></p>
+                        <p>{$row['address']}</p>
+                        <p id="index_overflow"><a style="text-decoration:none;" class="pull-right" href="{:U('Active/detail',array('id'=>$row['id']))}"><img style="max-width: 25px;" src="/xiahuan/Public/Static/Home/img/eye.png">查看詳情</a></p>
+                    </div>
+                    </div>
+            	</li>
+                </volist>
+            </ul><!--/thumbnails-->
+            <div class="pagination pagination-large pagination-centered">
+                <ul>{$page}</ul>
+            </div>
+        </div>                
+    </div><!--/row-fluid-->         
+</div><!--/container-->	 	
+<!--=== End Content Part ===-->
+
+<!--=== Footer ===-->
+<include file="common/footer" />

@@ -1,0 +1,538 @@
+[ 2022-08-07T00:47:51+08:00 ] 185.191.171.1 /xiahuan/Active/index/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001166s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002636s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003903s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T01:00:35+08:00 ] 173.252.111.8 /xiahuan/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001040s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001973s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003081s ]
+SQL: SHOW COLUMNS FROM `arm_active` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `arm_active` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 4   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `arm_news` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `arm_news` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY grade desc,created desc LIMIT 4   [ RunTime:0.0089s ]
+SQL: SHOW COLUMNS FROM `arm_media` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `arm_media` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY grade desc,created desc LIMIT 3   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `arm_media2` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `arm_media2` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 3   [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `arm_shop` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `arm_shop` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY grade desc,created desc LIMIT 4   [ RunTime:0.0062s ]
+SQL: SHOW COLUMNS FROM `arm_street_history` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `arm_street_history` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY rand() LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT * FROM `arm_shop` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY rand() LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `arm_posts` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `arm_posts` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY rand() LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `arm_active` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `arm_slide` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `arm_p_cbanner` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `arm_introduce` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `arm_community_image` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `arm_street_history` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_shop` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_posts` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_news` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_media` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `arm_media2` [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `arm_culture_heritage` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `arm_links` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `arm_slide` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY re_time desc LIMIT 4   [ RunTime:0.0153s ]
+SQL: SELECT * FROM `arm_p_cbanner` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY re_time desc LIMIT 6   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `arm_active` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `arm_community_image` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 10   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `arm_street_history` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY sort desc,created desc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `arm_shop` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0025s ]
+SQL: SELECT * FROM `arm_posts` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0018s ]
+SQL: SELECT * FROM `arm_news` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0036s ]
+SQL: SELECT * FROM `arm_media` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `arm_media2` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `arm_culture_heritage` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY sort desc,created desc  [ RunTime:0.0047s ]
+SQL: SELECT * FROM `arm_links` WHERE `deleted` IS NULL AND `status` = 'published' ORDER BY created desc LIMIT 50   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000308s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000357s ]
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 381 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 384 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 387 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 402 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 408 行.
+NOTIC: [8] Undefined variable: shoptype /pub/www/wwwroot/www.macauonline.net/xiahuan/App/Runtime/Cache/Home/00e52909bed743ea261af4b6823297ff.php 第 414 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037338s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037385s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001020s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001845s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002926s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001206s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001272s ]
+
+[ 2022-08-07T01:08:50+08:00 ] 114.119.152.86 /xiahuan/Shop/categroy/shoptype/fashion/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000052s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000464s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000614s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001147s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T03:00:51+08:00 ] 114.119.153.106 /xiahuan/Shop/detail/id/114.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001007s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002197s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003281s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T03:19:52+08:00 ] 114.119.153.105 /xiahuan/Shop/detail/id/16.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001112s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004297s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T03:44:27+08:00 ] 114.119.153.108 /xiahuan/Shop/detail/id/60.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001180s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004834s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T03:50:25+08:00 ] 114.119.153.108 /xiahuan/Shop/detail/id/63.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000845s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001565s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T03:56:30+08:00 ] 114.119.152.86 /xiahuan/Shop/detail/id/14.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000054s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002824s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003320s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T04:02:36+08:00 ] 114.119.152.97 /xiahuan/Shop/detail/id/62.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000054s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000431s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001061s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T04:08:40+08:00 ] 114.119.153.108 /xiahuan/Shop/detail/id/25.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000053s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002045s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T04:09:53+08:00 ] 185.191.171.1 /xiahuan/Media2/portfolio-shop.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000052s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001854s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T04:14:43+08:00 ] 114.119.153.108 /xiahuan/Shop/detail/id/126.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000832s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001545s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T04:26:57+08:00 ] 114.119.153.105 /xiahuan/Shop/categroy/shoptype/food.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000831s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001538s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T05:40:37+08:00 ] 185.191.171.1 /xiahuan/Shop/categroy/shoptype/food/p/portfolio-food.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000064s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001095s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007635s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T05:46:35+08:00 ] 114.119.153.108 /xiahuan/Shop/detail/id/116.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000064s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000965s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002115s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T07:42:56+08:00 ] 114.119.153.106 /xiahuan/News/detail/id/13.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000057s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000964s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002188s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003237s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T08:11:28+08:00 ] 185.191.171.26 /xiahuan/Media2/blog.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001027s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002228s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003332s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T08:52:36+08:00 ] 114.119.153.105 /xiahuan/Shop/detail/id/40.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000088s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001153s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001834s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003093s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T09:59:36+08:00 ] 185.191.171.38 /xiahuan/Shop/categroy/shoptype/food.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000058s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000956s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002155s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003188s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T13:26:51+08:00 ] 185.191.171.20 /xiahuan/Shop/index/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001172s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004132s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005383s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T13:30:49+08:00 ] 114.119.153.105 /xiahuan/Shop/detail/id/24.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001664s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001218s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002995s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T13:43:16+08:00 ] 185.191.171.19 /xiahuan/Shop/detail/id/page_faq.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001218s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002627s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003959s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T14:38:00+08:00 ] 185.191.171.15 /xiahuan/Shop/categroy/shoptype/fashion/p/page_faq.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001238s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002661s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004007s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T14:53:10+08:00 ] 185.191.171.2 /xiahuan/Media/portfolio-shop.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001419s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005185s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T15:12:32+08:00 ] 185.191.171.13 /xiahuan/Shop/index/p/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001297s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006456s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T15:58:44+08:00 ] 185.191.171.44 /xiahuan/Shop/categroy/shoptype/food/p/portfolio-manual.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001181s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002512s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003803s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T16:01:24+08:00 ] 114.119.153.106 /xiahuan/Shop/index/p/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002895s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T16:40:20+08:00 ] 114.119.152.86 /xiahuan/StreetHistory/detail/id/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001160s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003314s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T16:46:34+08:00 ] 114.119.152.86 /xiahuan/Shop/detail/id/73.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000933s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001636s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T16:55:52+08:00 ] 114.119.153.108 /xiahuan/Active/detail/id/9.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000621s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000864s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001580s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T16:57:01+08:00 ] 185.191.171.42 /xiahuan/CultureHeritage/portfolio-manual.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000088s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000628s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005277s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T17:00:54+08:00 ] 114.119.152.97 /xiahuan/Active/detail/id/8.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009161s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T17:07:04+08:00 ] 114.119.153.105 /xiahuan/Shop/detail/id/83.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000055s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001887s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002398s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T17:19:23+08:00 ] 114.119.153.108 /xiahuan/Shop/detail/id/12.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000971s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003211s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004279s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T17:22:34+08:00 ] 185.191.171.15 /xiahuan/Posts/detail/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000619s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008072s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T17:30:37+08:00 ] 114.119.153.105 /xiahuan/Posts/detail/id/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001221s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001882s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003211s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T17:51:48+08:00 ] 114.119.152.86 /xiahuan/Posts/detail/id/11.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001222s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003972s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005305s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T17:54:07+08:00 ] 185.191.171.37 /xiahuan/Shop/categroy/shoptype/fashion/p/portfolio-manual.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000703s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001693s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T18:07:17+08:00 ] 185.191.171.5 /xiahuan/Shop/detail/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000962s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001677s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T18:08:56+08:00 ] 185.191.171.41 /xiahuan/Shop/categroy/shoptype/fashion/p/blog.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000621s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001663s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T18:11:27+08:00 ] 114.119.152.86 /xiahuan/Shop/detail/id/40.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000054s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000696s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004902s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T18:25:33+08:00 ] 185.191.171.21 /xiahuan/Shop/detail/id/portfolio.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000744s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001125s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001982s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T18:50:14+08:00 ] 185.191.171.21 /xiahuan/Media/detail/id/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001384s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002564s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T18:52:14+08:00 ] 185.191.171.10 /xiahuan/StreetHistory/detail/id/page_login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000582s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001832s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T22:50:13+08:00 ] 114.119.153.106 /xiahuan/Shop/index/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001281s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005451s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T23:01:01+08:00 ] 114.119.153.105 /xiahuan/Posts/detail/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000645s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000900s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001638s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T23:07:01+08:00 ] 114.119.153.106 /xiahuan/Shop/index/p/9.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000677s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.010262s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011073s ]
+ERR: 無法載入控制器:Xiahuan
+
+[ 2022-08-07T23:26:43+08:00 ] 185.191.171.21 /xiahuan/Shop/index/p/11.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000604s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007644s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008349s ]
+ERR: 無法載入控制器:Xiahuan
+

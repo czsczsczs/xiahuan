@@ -1,0 +1,51 @@
+<include file="common/header" />
+<!--=== End Header ===-->     
+
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs margin-bottom-40">
+	<div class="container">
+        <!-- <h1 class="color-green pull-left">Portfolio</h1> -->
+        <ul class="pull-right breadcrumb">
+            <li><a href="{:U('Index/index')}">首頁</a> <span class="divider">/</span></li>
+            <li class="active">特色景點</li>
+        </ul>
+    </div><!--/container-->
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+
+<!--=== Content Part ===-->
+<div class="container"> 	
+	<div class="row-fluid"> 
+        <div id="w">    
+            <!-- <div class="sort" id="sort">
+				<ul class="unstyled inline">
+                	<li><a href="#" class="all selected">全部</a></li> -->
+                    <!-- <volist name="street_list" id="street">
+                	   <li><a href="#" class="street{$street['id']}">{$street['name']}</a></li>
+                	</volist> -->
+            <!--     </ul>
+            </div> -->
+            
+            <ul class="portfolio recent-work clearfix"> 
+                <volist name="list" id="row">
+                <li data-id="id-1" class="street{$row['street_id']}">
+                    <a href="{:U('Posts/detail',array('id'=>$row['id']))}">
+                    	<em class="overflow-hidden imgsize"><img src="{$row['cover']}" alt="" /></em>
+                        <span>
+                            <strong>{$row['title']}</strong>
+                             
+                        </span>
+                    </a>
+                </li>
+                </volist>
+            </ul>
+            <div class="pagination pagination-large pagination-centered">
+                <ul>{$page}</ul>
+            </div>
+        </div>                
+    </div><!--/row-fluid-->         
+</div><!--/container-->	 	
+<!--=== End Content Part ===-->
+
+<!--=== Footer ===-->
+<include file="common/footer" />

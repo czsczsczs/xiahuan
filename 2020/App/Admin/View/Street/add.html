@@ -1,0 +1,63 @@
+<include file="common/header" />
+<script src="__PUBLIC__ueditor/ueditor.config.js"></script>
+<script src="__PUBLIC__ueditor/ueditor.all.js"></script>
+<style>
+  #start_tip{
+    display: none;
+  }
+  #end_tip{
+    display: none;
+  }
+  </style>
+            <div id="page-wrapper">
+                <div class="graphs">
+                    <div class="xs">
+                        <h3>
+                            新增街道
+                        </h3>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="horizontal-form">
+                                <form class="form-horizontal" action="{:U('Street/create')}" method="post">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label" for="focusedinput">名稱*</label>
+                                        <div class="col-sm-4">
+                                            <input class="form-control1" id="name" name="name" type="text">
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <p class="help-block">
+                                               
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="panel-footer">
+                                        <div class="row">
+                                            <div class="col-sm-8 col-sm-offset-2">
+                                                <button class="btn btn-info">
+                                                  提交
+                                              </button>
+                                              <button type="button" class="btn btn-warning warning_22" onclick="javascript:history.back(-1);">返回列表</button>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <include file="common/footer" />
+                </div>
+            </div>
+            <!-- /#page-wrapper -->
+        </div>
+        <!-- /#wrapper -->
+        <!-- Nav CSS -->
+        <link href="__PUBLIC__css/custom.css" rel="stylesheet">
+            <!-- Metis Menu Plugin JavaScript -->
+            <script src="__PUBLIC__js/metisMenu.min.js">
+            </script>
+            <script src="__PUBLIC__js/custom.js">
+            </script>
+        </link>
+    </body>
+</html>

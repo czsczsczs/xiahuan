@@ -1,0 +1,87 @@
+<include file="common/header" />
+<!--=== End Header ===-->
+
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs margin-bottom-20">
+    <div class="container">
+        <h1 class="color-green pull-left"></h1>
+        <ul class="pull-right breadcrumb">
+            <li><a href="index.html">首頁</a> <span class="divider">/</span></li>
+            <li class="active">爛鬼樓緣起</li>
+        </ul>
+    </div><!--/container-->
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+
+<!--=== Content Part ===-->
+<div class="container">
+    <div class="row-fluid blog-page portflio_details">
+        <!-- Left Sidebar -->
+        <div class="span9">
+
+            <!-- Tabs -->
+
+            <ul class="nav nav-tabs tabs">
+                <li class="active"><a href="#home" data-toggle="tab">{$profile['title']}</a></li>
+                <!-- <if condition="$scenery">
+                <volist name="scenery" id="row_se1">
+                    <li><a href="#scenery{$row_se1['id']}" data-toggle="tab">{$row_se1['title']}</a></li>
+                </volist>
+                </if>
+                <volist name="antique" id="row_an1">
+                    <li><a href="#antique{$row_an1['id']}" data-toggle="tab">{$row_an1['title']}</a></li>
+                </volist>
+                </if> -->
+                
+                
+            </ul><!--/tabs-->
+
+            <div class="tab-content margin-bottom-20">
+                <div class="tab-pane active" id="home">
+                    <!-- <img class="pull-left lft-img-margin img-width-200" src="{$profile['cover']}" alt="" /> -->
+                    <h4>{$profile['title']}</h4>
+                    <p>{$profile['content']|htmlspecialchars_decode}</p>
+                </div>
+
+                <!-- <if condition="$scenery">
+                <volist name="scenery" id="row_se">
+                <div class="tab-pane" id="scenery{$row_se['id']}">
+                    <h4>{$row_se['title']}</h4>
+                    <p>{$row_se['content']|htmlspecialchars_decode}</p>
+                </div>
+                </volist>
+                </if>
+                <if condition="$antique">
+                <volist name="$antique" id="row_an">
+                <div class="tab-pane" id="antique{$row_an['id']}">
+                    <h4>{$row_an['title']}</h4>
+                    <p>{$row_an['content']|htmlspecialchars_decode}</p>
+                </div>
+                        
+                </volist>
+                </if> -->
+                
+                
+            </div><!--/tab-content-->
+
+
+
+           <!--  <div class="blog margin-bottom-30">
+                <h3 class="text-center">{$profile['title']}</h3>
+                <div class="text-center">作者：</div>
+                <div class="blog-img"><img src="{$profile['cover']}" alt="" /></div>
+                    <p>{$profile['content']|htmlspecialchars_decode}</p>
+
+            </div> -->
+        <!--/span9-->
+        
+        </div>
+        <!-- Right Sidebar -->
+        <include file="common/page_right" />
+        <!--/span3-->
+    </div><!--/row-fluid-->
+</div><!--/container-->
+<!--=== End Content Part ===-->
+
+<!--=== Footer ===-->
+<include file="common/footer" />

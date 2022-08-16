@@ -1,0 +1,116 @@
+<include file="common/header" />
+<style>
+  #start_tip{
+    display: none;margin-left:10px;
+  }
+  #end_tip{
+    display: none;margin-left:10px;
+  }
+</style>
+  <div id="page-wrapper">
+    <div class="col-md-12 graphs">
+     <div class="xs">
+        <h3 id="title">新增管理員</h3>
+        <div class="well1 white">
+        <form class="form-floating ng-pristine ng-invalid ng-invalid-required ng-valid-email ng-valid-url ng-valid-pattern" novalidate="novalidate" ng-submit="submit()" action="{:U('Admin/add')}" method="post">
+          <fieldset>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="control-label">名稱 *</label>
+                <input type="text" class="form-control1 ng-invalid ng-invalid-required ng-touched" name="username" placeholder="用於登錄的名稱">
+              </div>
+              <div class="form-group">
+                <label class="control-label">密碼 * </label>
+                <input type="password" class="form-control1 ng-invalid ng-invalid-required ng-touched" name="password">
+              </div>
+              <div class="form-group">
+                <label class="control-label">確認密碼 * </label>
+                <input type="password" class="form-control1 ng-invalid ng-invalid-required ng-touched" name="repassword">
+              </div>
+              <div class="form-group">
+                <label class="control-label">手機號碼</label>
+                <input type="text" class="form-control1 ng-invalid ng-invalid-required ng-touched" name="mobile_phone">
+              </div>
+              <div class="form-group">
+                <label class="control-label">郵箱</label>
+                <input type="text" class="form-control1 ng-invalid ng-invalid-required ng-touched" name="email">
+              </div>
+              <div class="form-group">
+                <label class="control-label">管理員等級*</label><br>
+                <select class="form-control1 ng-invalid ng-invalid-required" ng-model="model.select" name="is_admin">
+                  <option value="1">超級管理員</option>
+                  <option value="2" selected="selected">普通管理員</option>
+                 
+                </select>
+              </div>
+              
+            </div>
+            
+           <div class="col-md-12">
+            <div class="form-group">
+                <button class="btn btn-info">提交</button>
+                <button type="button" class="btn btn-warning warning_22" onclick="javascript:history.back(-1);">返回列表</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <include file="common/footer" />
+   </div>
+      </div>
+      <!-- /#page-wrapper -->
+   </div>
+    <!-- /#wrapper -->
+
+<script type="text/javascript">
+        $('#start_time').daterangepicker({
+            autoUpdateInput: false,
+            timePicker: true,
+            timePicker24Hour: true,
+            locale: {
+              format: 'YYYY-MM-DD HH:mm',
+              cancelLabel: 'Clear', 
+            },
+            "singleDatePicker": true,
+            
+
+        });
+        var daysOfWeek = new Array('日', '一', '二', '三', '四', '五', '六');
+        $('#start_time').on('apply.daterangepicker', function(ev, picker) {
+            $(this).val(picker.startDate.format('YYYY-MM-DD HH:mm'));
+            
+        });
+
+        $('#start_time').on('cancel.daterangepicker', function(ev, picker) {
+            $(this).val('');
+            $('#start_tip').css('display','block').html('');
+        });
+
+        $('#end_time').daterangepicker({
+            autoUpdateInput: false,
+            timePicker: true,
+            timePicker24Hour: true,
+            locale: {
+              format: 'YYYY-MM-DD HH:mm',
+              cancelLabel: 'Clear',
+            },
+            "singleDatePicker": true,
+            function(chosen_date) {
+              $('#end_time').val(chosen_date.format('YYYY-MM-DD HH:mm'));
+            }
+        });
+        $('#end_time').on('apply.daterangepicker', function(ev, picker) {
+            $(this).val(picker.endDate.format('YYYY-MM-DD HH:mm'));
+            
+        });
+
+        $('#end_time').on('cancel.daterangepicker', function(ev, picker) {
+            $(this).val('');
+            $('#end_tip').css('display','block').html('');
+
+        });
+        
+    </script>
+</body>
+</html>

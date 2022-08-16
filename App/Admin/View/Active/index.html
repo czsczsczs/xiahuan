@@ -1,0 +1,149 @@
+<include file="common/header" />
+            <div id="page-wrapper">
+            <div class="graphs">
+            <div class="xs">
+             <h3 id="title">巡禮活動</h3>
+            </div>
+            <div class="col-md-12">
+                <div class="mailbox-content">
+
+                   <div class="mail-toolbar clearfix">
+                        
+                        <div class="dropdown" style="padding-left:20px; ">
+                          <a href="{:U('Active/add')}"><button type="button" class="btn btn-info">新增</button></a>
+                          <a href="{:U('Active/index')}"><button type="button" class="btn btn-info">列表</button></a>
+                        </div>
+                        <div class="clearfix"> </div>
+                        <br/>
+                        <form class="bs-docs-example" novalidate="novalidate" ng-submit="submit()" action="{:U('Active/index')}" method="get">
+                        <div class="col-md-2">
+                          
+                          <select name="status" class="form-control select2">
+                            <option selected="selected" value="">狀態</option>
+                            <option <if condition="$status == 'published'"> selected="selected" </if> value="published">發佈</option>
+                            <option <if condition="$status == 'draft'"> selected="selected" </if> value="draft">草稿</option>
+                            <option <if condition="$status == 'recommend'"> selected="selected" </if> value="recommend">推薦</option>
+                          </select>
+                          
+                        </div>
+                        
+                        <div class="col-md-4"><input type="text" class="form-control1" name="keyword" value="{$keyword}" placeholder="請輸入關鍵字進行搜索"></div>
+                        <div class="col-md-3"><button type="submit" class="btn btn-info">篩選</button>&nbsp;&nbsp;<a class="btn btn-info" href="{:U('Active/index')}">撤銷</a></div>
+                        <div class="col-md-3">共 <span style="color: blue;">{$count} </span>條記錄</div>
+
+                      
+                    </form>
+                    
+
+                    
+                   </div>
+                   
+
+                    <table class="table">
+                        <thead>
+                            <tr class="unread checked">
+                                <td id="thead_td">編號</td>
+                                <td id="thead_td">封面圖</td>
+                                <td id="thead_td">標題</td>
+                                <td id="thead_td">狀態</td>
+                                <td id="thead_td">是否推薦</td>
+                                <td id="thead_td">活動時間</td>
+                                <td id="thead_td">創建時間</td>
+                                <td id="thead_td">操作</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                          <volist name="list" id="row">
+                            <tr class="unread checked">
+                                <td class="hidden-xs">{$row['id']}</td>
+                                <td class="hidden-xs">
+                                  <if condition="$row['cover_width_300']">
+                                  <img width="150" src="{$row['cover_width_300']}">
+                                  <else/>
+                                  </if>
+                                </td>
+                                <td class="hidden-xs">{$row['title']}</td>
+                                
+                                <td class="hidden-xs">{$row['status'] == 'published' ? '發佈':'草稿'}</td>
+                                <td class="hidden-xs" id="recommend_{$row['id']}">
+                                  <if condition="$row['recommend']">
+                                    <i onclick="recommend({$row['id']})" class="fa fa-check text-red" title="推薦"></i>
+                                    <else/>
+                                    <i onclick="recommend({$row['id']})" class="fa fa-close text-muted" title="未推薦"></i>
+                                  </if>
+                                </td>
+                                <td>{$row['time']}</td>
+                                <td>{$row['created']|date="Y-m-d H:i:s",###}</td>
+                                <td>
+                                <div class="dropdown">
+                                 
+                                  <a href="{:U('Active/edit',array('id'=>$row['id']))}"><button type="button" class="btn btn-warning warning_22">修改</button></a>
+                                  <a onclick="deleted({$row['id']})"><button type="button" class="btn btn-danger">刪除</button></a>
+                                  <!-- <a href="{:U('Active/add_en',array('id'=>$row['id']))}" title="編輯英文信息"><button type="button" class="btn btn-info">編輯英文信息</button></a> -->
+                                </div>
+                                </td>
+                            </tr>
+                            </volist>
+                        </tbody>
+                    </table>
+                   </div>
+                  <ul class="paginList pager">{$page}</ul>
+                </div>
+                <div class="clearfix"> </div>
+           </div>
+         <include file="common/footer" />
+        </div>
+      </div>
+      <!-- /#page-wrapper -->
+   </div>
+    <!-- /#wrapper -->
+<!-- Nav CSS -->
+<!-- Metis Menu Plugin JavaScript -->
+<script>
+
+    function deleted(id) {
+        //弹出提示，是否确定删除
+        if (confirm("确定要删除吗？")) {
+            $.ajax({
+                url: "{:U('Active/destroy')}",
+                type: "post",
+                dataType: "json",
+                data: {id: id},
+                success: function (msg) {
+                    //ajax成功返回数据要执行的代码
+                    if(msg.status == 403){
+                      alert('删除失败');
+                      return false
+                    }else{
+                      location.reload(true);
+                    }
+                    
+                }
+            });
+        }
+    }
+    //推薦/取消推薦
+    function recommend(id) {
+
+            $.ajax({
+                url: "{:U('Active/recommend')}",
+                type: "post",
+                dataType: "json",
+                data: {id: id},
+                success: function (msg) {
+                    //ajax成功返回数据要执行的代码
+                    console.dir(msg);
+                    if(msg.status == 'recommend'){
+                      $('#recommend_'+id).html('<i onclick="recommend('+id+')" class="fa fa-check text-red" title="推薦"></i>');
+                    }
+                    if(msg.status == 'cancel'){
+                      $('#recommend_'+id).html('<i onclick="recommend('+id+')" class="fa fa-close text-muted" title="未推薦"></i>');
+                    }
+                    
+                }
+            });
+        
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<style type="text/css">
+    .btn {
+        display: block;
+        position: relative;
+        background: #adadad;
+        padding: 5px;
+        color: #fff;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .headline {
+        margin: unset !important;
+    }
+    .margin-top{
+        margin-top:20px;
+    }
+    .searchx {
+        width: 24px;
+        max-width: 24px !important;
+    }
+    .butt{
+        background-color: unset;
+        border: 2px solid #385A9F;
+    }
+    .downxian{
+        margin-top: 30px !important;
+        margin-bottom: 60px !important;
+        border-bottom: 2px solid #cbcbcb;
+    }
+
+</style>
+<div class="span3">
+    <!-- Search Bar -->
+    <div class="headline"><h3 class="headh3" style="color: #385A9F">搜索內容</h3></div>
+    <div class="input-append  margin-top">
+        <form action="{:U('Search/index')}" method="get">
+            <input style="border: 2px solid #385A9F;border-right: unset;" type="text" name="keyword" class="span9" value="搜索關鍵詞"/>
+            <button class="butt" type="submit">
+                <img class="searchx search-btn" src="/xiahuan/Public/Static/Home/img/xun.png">
+            </button>
+        </form>
+
+    </div>
+
+    <!-- Posts -->
+    <div class="posts margin-bottom-20">
+        <div class="headline"><h3 style="color: #385A9F">巡禮活動</h3></div>
+        <volist name="new_active" id="active">
+            <a href="{:U('Active/detail',array('id'=>$active['id']))}"><dl class="dl-horizontal">
+                <dt><img src="{$active['cover']}" alt="" /></dt>
+                <dd>
+                    <p>{$active['title']}</p>
+                </dd>
+            </dl></a>
+        </volist>
+        <a href="{:U('Active/index')}"><h5 style="color: #385A9F;float: right;">查看更多》</h5></a>
+        <div class="headline downxian"></div>
+    </div><!--/posts-->
+
+
+
+    <div class="posts margin-bottom-20">
+        <div class="headline"><h3 style="color: #385A9F">社區美食</h3></div>
+        <volist name="new_shop" id="shop">
+            <a href="{:U('Shop/detail',array('id'=>$shop['id']))}"><dl class="dl-horizontal">
+                <dt><img src="{$shop['cover']}" alt="" /></dt>
+                <dd>
+                    <p>{$shop['title']}</p>
+                </dd>
+            </dl></a>
+        </volist>
+        <a href="{:U('Shop/index')}"><h5 style="color: #385A9F;float: right;">查看更多》</h5></a>
+        <div class="headline downxian"></div>
+    </div>
+
+</div>

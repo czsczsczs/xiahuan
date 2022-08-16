@@ -1,0 +1,71 @@
+<div class="span3">
+            <!-- Search Bar -->
+            <div class="headline"><h3 class="headh3">搜索內容</h3></div>
+            <div class="input-append  margin-bottom-20">
+                <form action="{:U('Search/index')}" method="get">
+                    <input type="text" name="keyword" class="span9" />
+                    <button type="submit" class="btn-u">搜索</button>
+                </form>
+
+            </div>
+
+            <!-- Posts -->
+            <div class="posts margin-bottom-20">
+                <div class="headline"><h3>最新活動</h3></div>
+                <volist name="new_active" id="active">
+                <dl class="dl-horizontal">
+                    <dt><a href="{:U('Active/detail',array('id'=>$active['id']))}"><img src="{$active['cover']}" alt="" /></a></dt>
+                    <dd>
+                        <p><a href="{:U('Active/detail',array('id'=>$active['id']))}">{$active['title']}</a></p>
+                    </dd>
+                </dl>
+                </volist>
+            </div><!--/posts-->
+
+            <!-- Posts -->
+            <div class="posts margin-bottom-20">
+                <div class="headline"><h3>最新資訊</h3></div>
+                <volist name="right_data" id="right_data_row">
+                <dl class="dl-horizontal">
+                    <dt>
+                        <if condition="$right_data_row['type'] eq 'shop'">
+                        <a href="{:U('Shop/detail',array('id'=>$right_data_row['id']))}">
+                        <elseif condition="$right_data_row['type'] eq 'posts'"/>
+                        <a href="{:U('Posts/detail',array('id'=>$right_data_row['id']))}">
+                        <else/>
+                        <a href="{:U('StreetHistory/detail',array('id'=>$right_data_row['id']))}">
+                        </if>
+                        <img src="{$right_data_row['cover_width_300']}" alt="" />
+                        </a>
+                    </dt>
+                    <dd>
+                        <p>
+                        <if condition="$right_data_row['type'] eq 'shop'">
+                        <a href="{:U('Shop/detail',array('id'=>$right_data_row['id']))}">
+                        <elseif condition="$right_data_row['type'] eq 'posts'"/>
+                        <a href="{:U('Posts/detail',array('id'=>$right_data_row['id']))}">
+                        <else/>
+                        <a href="{:U('StreetHistory/detail',array('id'=>$right_data_row['id']))}">
+                        </if>{$right_data_row['title']}</a>
+                        </p>
+                    </dd>
+                </dl>
+                </volist>
+
+            </div><!--/posts-->
+            <!-- Photo Stream -->
+            <!-- <div class="headline"><h3>社區美圖</h3></div>
+            <ul class="unstyled blog-ads">
+                <li><a href="photo_details.html"><img src="__HOME_PUBLIC__img/sliders/elastislide/5.jpg" alt="" class="hover-effect" /></a></li>
+                <li><a href="photo_details.html"><img src="__HOME_PUBLIC__img/sliders/elastislide/6.jpg" alt="" class="hover-effect" /></a></li>
+                <li><a href="photo_details.html"><img src="__HOME_PUBLIC__img/sliders/elastislide/8.jpg" alt="" class="hover-effect" /></a></li>
+                <li><a href="photo_details.html"><img src="__HOME_PUBLIC__img/sliders/elastislide/10.jpg" alt="" class="hover-effect" /></a></li>
+                <li><a href="photo_details.html"><img src="__HOME_PUBLIC__img/sliders/elastislide/11.jpg" alt="" class="hover-effect" /></a></li>
+                <li><a href="photo_details.html"><img src="__HOME_PUBLIC__img/sliders/elastislide/1.jpg" alt="" class="hover-effect" /></a></li>
+                <li><a href="photo_details.html"><img src="__HOME_PUBLIC__img/sliders/elastislide/2.jpg" alt="" class="hover-effect" /></a></li>
+                <li><a href="photo_details.html"><img src="__HOME_PUBLIC__img/sliders/elastislide/7.jpg" alt="" class="hover-effect" /></a></li>
+            </ul> -->
+
+            <!-- Blog Tags -->
+
+        </div>

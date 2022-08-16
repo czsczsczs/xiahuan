@@ -1,0 +1,90 @@
+<style type="text/css">
+
+    .footer-share {
+        display: inline-flex;
+        text-indent: 10px;
+        float: right;
+        -webkit-box-lines: single;
+        -webkit-box-orient: horizontal;
+        margin-bottom: 50px;
+    }
+
+    .footer-share-facebook {
+        background-color: rgb(213 222 203 / 0%);
+        width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 10px;
+        position: relative;
+
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .footer-share-wechat {
+        background-color: rgb(213 222 203 / 0%);
+        width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 10px;
+        position: relative;
+
+        opacity: 1;
+        cursor: pointer;
+    }
+
+
+    .footer-share-weibo {
+        background-color: rgb(213 222 203 / 0%);
+        width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 10px;
+        position: relative;
+
+        opacity: 1;
+        cursor: pointer;
+    }
+
+
+
+    @media (max-width:768px ) {
+        .footer-share {
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+        .footer-share-facebook {
+            margin-right: 3px;
+        }
+
+        .footer-share-wechat {
+            margin-right: 3px;
+        }
+
+
+        .footer-share-weibo {
+            margin-right: 3px;
+        }
+    }
+
+
+
+</style>
+<div class="footer-share">
+
+    <button type="button" class="footer-share-wechat" style="background-image: url(__HOME_PUBLIC__img/footer/IC-200-WeChat.png);background-size:30px 30px;"
+            onclick="shareWechat()"></button>
+
+    <div id="myModal" class="modal" style="display:none;">
+        <!-- 弹窗内容 -->
+        <span class="close">&times;</span>
+        <div class="footer-text">掃碼進入小程序</div>
+        <img src="__HOME_PUBLIC__img/footer/wx.jpg" class="footer-share-wx">
+    </div>
+    <br>
+    <button type="button" class="footer-share-weibo" style="background-image: url(__HOME_PUBLIC__img/footer/IC-200-WB.png);background-size:30px 30px;"
+            onclick="shareWeibo()"></button>
+    <br>
+    <button type="button" class="footer-share-facebook" style="background-image: url(__HOME_PUBLIC__img/footer/IC-200-facebook.png);background-size:30px 30px;" onclick="shareFacebook()"></button>
+
+</div>

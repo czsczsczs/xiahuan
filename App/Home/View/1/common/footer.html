@@ -1,0 +1,823 @@
+
+<!--=== Footer ===-->
+<div class="container">
+	<div class="index-activity " style="margin-bottom: -10px;">
+		<!-- Recent Works --> 
+		<div class="headline" style="margin: 50px 0 0 0;">
+			<h3><a href="javascript:volid(0)" style="font-weight: 600;color: #385A9F;">合作夥伴</a></h3>
+		</div>
+		<div class="row-fluid">
+			<div id="w">
+				<ul class="portfolio clearfix" style="margin-top: 0px;" id="por">
+					<volist name="links" id="links">
+						<li data-id="id-1" link="{$links['url']}">
+							<div class="thumbnail-style" style="border: 1px solid #ccc !important;">
+							<div class="thumbnail-img">
+								<div class="overflow-hidden imgsize" style="height: 51px;width: 163px;">
+							<a href="{$links['url']}" target="_blank">
+								<em class="overflow-hidden">
+									<img class="img123456" src="{$links['image']}" alt="" />
+								</em>
+							</a>
+							</div>
+							</div>
+							</div>
+						</li>
+					</volist>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<style>
+		.img123456{
+			margin-top: 0px !important;
+			margin-left: 0px !important;
+		}
+	</style>
+
+<div class="footer">
+
+
+
+	<img src="__HOME_PUBLIC__img/footer/官網banner-10.jpg" class="footer-img footer-img-pc" alt="" />
+	<img src="__HOME_PUBLIC__img/footer/banner-220407.jpg" class="footer-img footer-img-mod" alt="" />
+
+	<div class="footer-share">
+
+		<button type="button" class="footer-share-wechat" style="background-image: url(__HOME_PUBLIC__img/footer/IC-200-WeChat.png);background-size:30px 30px;"
+				onclick="shareWechat()"></button>
+
+		<div id="myModal" class="modal" style="display:none;">
+			<!-- 弹窗内容 -->
+			<span class="close">&times;</span>
+			<div class="footer-text">掃碼進入小程序</div>
+			<img src="__HOME_PUBLIC__img/footer/wx.jpg" class="footer-share-wx">
+		</div>
+		<br>
+		<button type="button" class="footer-share-weibo" style="background-image: url(__HOME_PUBLIC__img/footer/IC-200-WB.png);background-size:30px 30px;"
+				onclick="shareWeibo()"></button>
+		<br>
+		<button type="button" class="footer-share-facebook" style="background-image: url(__HOME_PUBLIC__img/footer/IC-200-facebook.png);background-size:30px 30px;" onclick="shareFacebook()"></button>
+
+</div>
+
+
+
+	<a style="color: beige;left: 16px; text-decoration:underline;position: relative;" href="http://www.macautech.net/">普及科技（澳門）有限公司</a>
+	<span style="color: beige;left: 16px; position: relative;">提供技術支持
+		<script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1280479679'%3E%3C/span%3E%3Cscript src='https://s9.cnzz.com/stat.php%3Fid%3D1280479679%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+	</span>
+</div>
+<!--/footer-->
+<!--=== End Footer ===-->
+
+<!--=== Copyright ===-->
+<!-- <div class="copyright">
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span8">
+
+                </div>
+                <div class="span4">
+                    <a href="{:U('Index/index')}">
+                        <img id="logo-footer" src="__HOME_PUBLIC__img/logo2-default.png" class="pull-right" alt="" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+<!--/copyright-->
+<!--=== End Copyright ===-->
+
+<!-- JS Global Compulsory -->
+<script type="text/javascript" src="__HOME_PUBLIC__js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/library/TrafficControl/1.4/src/TrafficControl_min.js"></script>
+<!-- <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=PSGDO96ZzxBUijinzhN6PajEn75enP1c" /> -->
+<script type="text/javascript" src="__HOME_PUBLIC__js/modernizr.custom.js"></script>
+<script type="text/javascript" src="__HOME_PUBLIC__plugins/bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
+<!-- JS Implementing Plugins -->
+<script type="text/javascript" src="__HOME_PUBLIC__plugins/revolution_slider/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+<script type="text/javascript" src="__HOME_PUBLIC__plugins/revolution_slider/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" src="__HOME_PUBLIC__plugins/swiper/swiper-4.4.1.min.js"></script>
+<script type="text/javascript" src="__HOME_PUBLIC__plugins/bxslider/jquery.bxslider.js"></script>
+<script type="text/javascript" src="__HOME_PUBLIC__plugins/flexslider/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="__HOME_PUBLIC__plugins/parallax-slider/js/modernizr.js"></script>
+<script type="text/javascript" src="__HOME_PUBLIC__plugins/parallax-slider/js/jquery.cslider.js"></script>
+<script type="text/javascript" src="__HOME_PUBLIC__plugins/portfolioSorting/js/jquery.quicksand.js"></script>
+<script type="text/javascript" src="__HOME_PUBLIC__plugins/portfolioSorting/js/sorting.js"></script>
+<script type="text/javascript" src="__HOME_PUBLIC__plugins/back-to-top.js"></script>
+<!-- JS Page Level -->
+<script type="text/javascript" src="__HOME_PUBLIC__js/app.js"></script>
+<script type="text/javascript" src="__HOME_PUBLIC__js/pages/index.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+		$(".ulc").on("click", "li", function() {
+			var link = $(this).attr("link");
+			window.parent.location.href = link;
+		})
+
+		var winWidth = $("html").width();
+		console.log('winWidth', winWidth)
+		if (winWidth > 767) {
+
+			$(".footer-img-mod").show();
+			$(".footer-img-pc").hide();
+
+		} else {
+			$(".footer-img-pc").show();
+			$(".footer-img-mod").hide();
+			$(".footer-share").hide();
+		}
+
+		var mySwiper1 = new Swiper('.swiper-con-activity', {
+			//loop: true,
+			slidesPerView: 4,
+			slidesPerGroup: 4,
+			spaceBetween: 10,
+			breakpoints: {
+				1200: {
+					slidesPerView: 4,
+					slidesPerGroup: 4,
+				},
+				979: {
+					slidesPerView: 3,
+					slidesPerGroup: 3,
+				},
+				767: {
+					slidesPerView: 2,
+					slidesPerGroup: 2,
+				},
+				460: {
+					slidesPerView: 1,
+					slidesPerGroup: 1,
+				}
+			},
+			// 如果需要前进后退按钮
+			// navigation: {
+			// 	nextEl: '.swiper-button-next',
+			// 	prevEl: '.swiper-button-prev',
+			// }
+		});
+
+		var mySwiper2 = new Swiper('.swiper-con-new', {
+			//loop: true,
+			// preventClicks : false,
+			slidesPerView: 4,
+			slidesPerGroup: 4,
+			spaceBetween: 10,
+			breakpoints: {
+				1200: {
+					slidesPerView: 4,
+					slidesPerGroup: 4,
+				},
+				979: {
+					slidesPerView: 3,
+					slidesPerGroup: 3,
+				},
+				767: {
+					slidesPerView: 2,
+					slidesPerGroup: 2,
+				},
+				460: {
+					slidesPerView: 1,
+					slidesPerGroup: 1,
+				}
+			},
+			// 如果需要前进后退按钮
+			// navigation: {
+			// 	nextEl: '.swiper-button-next',
+			// 	prevEl: '.swiper-button-prev',
+			// }
+		});
+
+
+		var mySwiper3 = new Swiper('.swiper-con-ac', {
+			//loop: true,
+			slidesPerView: 2,//一行显示2个
+    		slidesPerColumn: 2,//显示2行
+			slidesPerGroup: 4,
+			spaceBetween: 40,
+			breakpoints: {
+				1200: {
+					slidesPerView: 4,
+					slidesPerGroup: 4,
+				},
+				979: {
+					slidesPerView: 4,
+					slidesPerGroup: 4,
+				},
+				767: {
+					slidesPerView: 2,
+					slidesPerGroup: 2,
+				},
+				460: {
+					slidesPerView: 1,
+					slidesPerGroup: 1,
+				}
+			},
+			// 如果需要前进后退按钮
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			}
+		});
+
+
+		var mySwiper4 = new Swiper('.swiper-con-acindex', {
+			//loop: true,
+			slidesPerView: 2,//一行显示2个
+    		slidesPerColumn: 3,//显示3行
+			slidesPerGroup: 6,
+			spaceBetween: 30,
+			breakpoints: {
+				1200: {
+					slidesPerView: 2,//一行显示2个
+					slidesPerColumn: 3,//显示3行
+					slidesPerGroup: 6,
+				},
+				979: {
+					slidesPerView: 2,//一行显示2个
+					slidesPerColumn: 3,//显示3行
+					slidesPerGroup: 6,
+				},
+				767: {
+					slidesPerView: 2,//一行显示2个
+					slidesPerColumn: 3,//显示3行
+					slidesPerGroup: 6,
+				},
+				460: {
+
+					slidesPerView: 1,//一行显示2个
+					slidesPerColumn: 6,//显示3行
+					slidesPerGroup: 6,
+				}
+			},
+			// 如果需要前进后退按钮
+		});
+
+
+		var mySwiper5 = new Swiper('.swiper-con-meindex', {
+			//loop: true,
+			slidesPerView: 2,//一行显示2个
+    		slidesPerColumn: 2,//显示3行
+			slidesPerGroup: 4,
+			spaceBetween: 30,
+			breakpoints: {
+				1200: {
+					slidesPerView: 2,//一行显示2个
+					slidesPerColumn: 2,//显示3行
+					slidesPerGroup: 4,
+				},
+				979: {
+					slidesPerView: 2,//一行显示2个
+					slidesPerColumn: 2,//显示3行
+					slidesPerGroup: 4,
+				},
+				767: {
+					slidesPerView: 1,//一行显示2个
+					slidesPerColumn: 4,//显示3行
+					slidesPerGroup: 4,
+				},
+				460: {
+
+					slidesPerView: 1,//一行显示2个
+					slidesPerColumn: 4,//显示3行
+					slidesPerGroup: 4,
+				}
+			},
+			// 如果需要前进后退按钮
+		});
+
+
+
+	
+		var mySwiper6 = new Swiper('#swiper-con-newac', {
+			//loop: true,
+			slidesPerView: 2,//一行显示3个
+    		slidesPerColumn: 2,//显示2行
+			slidesPerGroup: 4,
+			spaceBetween: 30,
+			breakpoints: {
+				1200: {
+					slidesPerView: 4,
+					slidesPerGroup: 4,
+				},
+				979: {
+					slidesPerView: 4,
+					slidesPerGroup: 4,
+				},
+				767: {
+					slidesPerView: 2,
+					slidesPerGroup: 2,
+				},
+				460: {
+					slidesPerView: 1,
+					slidesPerGroup: 1,
+				}
+			},
+			// 如果需要前进后退按钮
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			}
+		});
+
+
+		var mySwiper7 = new Swiper('.swiper-con-meili', {
+			// loop: true,
+			slidesPerView: 3,
+			slidesPerGroup: 3,
+			spaceBetween: 10,
+			breakpoints: {
+				1200: {
+					slidesPerView: 3,
+					slidesPerGroup: 3,
+				},
+				979: {
+					slidesPerView: 3,
+					slidesPerGroup: 3,
+				},
+				767: {
+					slidesPerView: 1,
+					slidesPerGroup: 1,
+				},
+				460: {
+					slidesPerView: 1,
+					slidesPerGroup: 1,
+				}
+			},
+			// 如果需要前进后退按钮
+			// navigation: {
+			// 	nextEl: '.swiper-button-next',
+			// 	prevEl: '.swiper-button-prev',
+			// }
+		});
+
+
+		var mySwiper8 = new Swiper('.swiper-con-scenic', {
+			// loop: true,
+			slidesPerView: 4,
+			slidesPerGroup: 4,
+			spaceBetween: 10,
+			breakpoints: {
+				1200: {
+					slidesPerView: 4,
+					slidesPerGroup: 4,
+				},
+				979: {
+					slidesPerView: 3,
+					slidesPerGroup: 3,
+				},
+				767: {
+					slidesPerView: 2,
+					slidesPerGroup: 2,
+				},
+				460: {
+					slidesPerView: 1,
+					slidesPerGroup: 1,
+				}
+			},
+			// 如果需要前进后退按钮
+			// navigation: {
+			// 	nextEl: '.swiper-button-next',
+			// 	prevEl: '.swiper-button-prev',
+			// }
+		});
+
+		var mySwiper9 = new Swiper('.swiper-con-shop', {
+			slidesPerView: 3,
+			slidesPerGroup: 4,
+			spaceBetween: 5,
+			breakpoints: {
+				1200: {
+					slidesPerView: 3,
+					slidesPerGroup: 3,
+				},
+				979: {
+					slidesPerView: 3,
+					slidesPerGroup: 3,
+				},
+				767: {
+					slidesPerView: 2,
+					slidesPerGroup: 2,
+				},
+				460: {
+					slidesPerView: 1,
+					slidesPerGroup: 1,
+				}
+			},
+			// 如果需要前进后退按钮
+			// navigation: {
+			// 	nextEl: '.swiper-button-next',
+			// 	prevEl: '.swiper-button-prev',
+			// }
+		});
+
+		App.init();
+		App.initBxSlider1();
+		App.initSliders();
+		// Index.initParallaxSlider();
+		Index.initRevolutionSlider();
+	});
+
+	// var map = new BMap.Map("map");
+	// var point = new BMap.Point(116.404, 39.915);
+	// map.centerAndZoom(point, 15);
+	// var marker = new BMap.Marker(point); // 创建标注
+	// map.addOverlay(marker); // 将标注添加到地图中
+	// marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+	jQuery(document).ready(function() {
+		App.init();
+	});
+	jQuery(document).ready(function() {
+		App.init();
+		App.initBxSlider1();
+		App.initSliders();
+		Index.initParallaxSlider();
+	});
+
+	//分享到新浪微博
+	function shareToXl(title, url, picurl) {
+		var sharesinastring =
+			'http://v.t.sina.com.cn/share/share.php?title=' + title + '&url=' + url + '&content=utf-8&sourceUrl=' + url +
+			'&pic=' + picurl;
+		window.open(sharesinastring, 'newwindow', 'height=400,width=400,top=100,left=100');
+
+	}
+	//分享到facebook
+	/*function shareToFB(title, url,picurl) {
+		var sharesinastring =
+			'http://www.facebook.com/sharer/sharer.php?title=' + title + '&url=' + url + '&content=utf-8&sourceUrl=' + url+'&pic=' + picurl;;
+		window.open(sharesinastring, 'newwindow', 'height=400,width=400,top=100,left=100');
+
+	}*/
+    function shareToFB(title, url) {
+        var sharesinastring =
+            "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url)+ "&title=" + encodeURIComponent(title)+ "&display=popup&ref=plugin&src=share_button";
+        window.open(sharesinastring, 'newwindow', 'height=400,width=400,top=100,left=100');
+
+    }
+	// 分享到微信
+	// 获取弹窗
+	var modal = document.getElementById('myModal');
+
+	// 打开弹窗的按钮对象
+
+
+	// 获取 <span> 元素，用于关闭弹窗
+	var span = document.querySelector('.close');
+
+	// 点击按钮打开弹窗
+	function shareWechat() {
+		modal.style.display = "block";
+	}
+
+	// 点击 <span> (x), 关闭弹窗
+	span.onclick = function() {
+		modal.style.display = "none";
+	}
+
+	// 在用户点击其他地方时，关闭弹窗
+
+	//点击空白处隐藏弹出层，下面为滑动消失效果和淡出消失效果。
+
+	$(document).mouseup(function(event){
+		var _con = $(modal); // 设置目标区域
+
+		if(!_con.is(event.target) && _con.has(event.target).length === 0){ // Mark 1
+
+		//$('#divTop').slideUp('slow'); //滑动消失
+		$(modal).hide(1000); //淡出消失
+
+		}
+	});
+
+
+
+
+	/*window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}*/
+
+	function shareWeibo() {
+		shareToXl("下環巡禮", "http://macauonline.net/xiahuan/Index/index.html");
+
+	}
+	function shareFacebook() {
+        shareToFB("下環巡禮", wz);
+
+	}
+</script>
+<!--[if lt IE 9]>
+    <script src="__HOME_PUBLIC__js/respond.js"></script>
+<![endif]-->
+
+</body>
+<style type="text/css">
+	.footer1{
+		/*margin-top: 100px;*/
+		/* padding: 20px 10px; */
+		background: #585f69;
+		color: #dadada;
+		z-index: -10;
+		zoom: 1;
+		text-align: center;
+		vertical-align: 1000px;
+	}
+	.footer-share-wx {
+		/*width: 30%;*/
+		/*margin: 5px 5px 5px 5px;*/
+		padding-bottom: 0px;
+		padding-top: 0px;
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+
+	.footer-logo{
+		position: relative;
+		bottom: 51px;
+		width: 600px;
+		left: -32px;
+		opacity: 1;
+		cursor: pointer;
+		z-index: 999;
+	}
+	.footer-share {
+		/*background-color: rgb(66, 71, 74);
+		width: 135px;
+		height: 40px;*/
+		position: fixed;
+		bottom: 76px;
+		right: 5px;
+		z-index: 99;
+		opacity: 1;
+		cursor: pointer;
+
+		/*position: inherit;
+		margin-left: 392px;
+		margin-top: -220px;
+		float: right;*/
+
+	}
+
+	.footer-share-facebook {
+		background-color: rgb(213 222 203 / 0%);
+		width: 30px;
+		height: 30px;
+		border: none;
+		border-radius: 10px;
+		position: fixed;
+		bottom: 76px;
+		right: 20px;
+		opacity: 1;
+		cursor: pointer;
+	}
+
+	.footer-share-wechat {
+		background-color: rgb(213 222 203 / 0%);
+		width: 30px;
+		height: 30px;
+		border: none;
+		border-radius: 10px;
+		position: fixed;
+		bottom: 165px;
+		right: 20px;
+		opacity: 1;
+		cursor: pointer;
+	}
+
+
+	.footer-share-weibo {
+		background-color: rgb(213 222 203 / 0%);
+		width: 30px;
+		height: 30px;
+		border: none;
+		border-radius: 10px;
+		position: fixed;
+		bottom: 120px;
+		right: 20px;
+		opacity: 1;
+		cursor: pointer;
+	}
+
+	.footer-text {
+		color: black;
+		font-size: 20px;
+		font-weight: bolder;
+		padding-top: 25px;
+		padding-bottom: 20px;
+		text-align: center;
+		margin: auto;
+	}
+
+	@media (max-width: 767px) {
+		.clearfix{
+			display: flex;
+			flex-wrap: wrap;
+			
+		}
+		.clearfix li{
+			margin-right: 6px;
+		}
+		.footer-share {
+			margin-top: -41px;
+			float: right;
+			margin-right: 80px;
+			width: 65px;
+			height: 25px;
+			overflow: hidden;
+		}
+
+		.footer-share-facebook {
+			margin-top: -30px;
+			transform: scale(0.6);
+			margin-left: 38px;
+		}
+
+		.footer-share-weibo {
+
+			margin-top: -30px;
+			transform: scale(0.6);
+			margin-left: 18px;
+		}
+
+		.footer-share-wechat {
+			transform: scale(0.6);
+			margin-top: -2px;
+
+			margin-left: -4px;
+
+		}
+		.modal {
+		    top: 130px !important;
+			left: 180px !important;
+		}
+	}
+
+	/* 弹窗 (background) */
+	.modal {
+		width: 350px;
+    margin-top: 5%;
+    margin-left: -10%;
+		display: none;
+		/* 默认隐藏 */
+		position: fixed;
+		/* 固定定位 */
+		z-index: 1;
+		/* 设置在顶层 */
+		/*left: 0;*/
+		/*top: 0;*/
+		/*margin:auto;*/
+		text-align:center;
+
+		/*background-color: rgb(0, 0, 0);*/
+		/*background-color: rgb(169 169 169);*/
+	}
+
+	/* 弹窗内容 */
+	.modal-content {
+		background-color: #fefefe;
+		margin: 15% auto;
+		padding: 20px;
+		border: 1px solid #888;
+		width: 80%;
+	}
+
+	/* 关闭按钮  #aaa*/
+	.close {
+		color: #1f1c1c;
+		float: right;
+		font-size: 40px;
+    	font-weight: initial;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+	.logo{
+		margin: 0;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		display: flex;
+		transition-property: transform,-webkit-transform;
+		box-sizing: content-box;
+		list-style: none;
+		padding: 0;
+	}
+	.logoli{
+		width: 285px;
+		margin-right: 10px;
+	}
+	.logodiv1{
+
+		width: 283px;
+		height: 100px;
+		margin-right: 6px;
+	}
+	.logodiv2{
+
+		width: 283px;
+		height: 100px;
+		margin-right: 6px;
+	}
+	.logodiv3{
+
+		width: 283px;
+		height: 100px;
+	}
+	.logo1{
+		width:100%;
+		margin-top: 6px;
+		margin-left: 1px;
+	}
+	.logo2{
+		width:100%;
+		padding-top: 8px;
+	}
+	.logo3{
+		width: 65%;
+		height: 96%;
+		z-index: -100;
+		margin-left: 47px;
+		margin-top: 4px;
+		position: relative;
+	}
+	@media (max-width: 768px){
+		.index-activity .imgsize {
+			height: 217px;
+		}
+		.logo{
+			margin: 0;
+			position: relative;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			display: flex;
+			transition-property: transform,-webkit-transform;
+			box-sizing: content-box;
+			list-style: none;
+			padding: 0;
+		}
+		.logoli{
+			position: relative;
+			width: 115px;
+			margin-right: 10px;
+		}
+		.logodiv1{
+			margin-right: 1px;
+			position: relative;
+
+			width: 80px;
+			height: 30px;
+
+		}
+		.logodiv2{
+			margin-right: 1px;
+			position: relative;
+
+			width: 80px;
+			height: 30px;
+
+		}
+		.logodiv3{
+			position: relative;
+
+			width: 80px;
+			height: 30px;
+		}
+		.logo1{
+			width: 80px;
+			z-index: -100;
+			margin-top: 3px;
+		}
+		.logo2{
+			width: 80px;
+			z-index: -100;
+		}
+		.logo3{
+			margin-left: 15px;
+			z-index: -100;
+		}
+	}
+</style>
+<script type="text/javascript">
+
+		var url = window.location.pathname;
+
+		if(url.indexOf('detail')>= 0){
+			document.getElementById("por").style.marginTop='unset';
+
+		}
+
+	</script>
+</html>

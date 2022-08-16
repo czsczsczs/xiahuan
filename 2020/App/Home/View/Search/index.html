@@ -1,0 +1,77 @@
+<include file="common/header" />
+<!--=== End Header ===-->
+
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs margin-bottom-40">
+	<div class="container">
+        <!-- <h1 class="color-green pull-left">Portfolio</h1> -->
+        <ul class="pull-right breadcrumb">
+            <li><a href="{:U('Index/index')}">首頁</a> <span class="divider">/</span></li>
+            <li class="#">搜索<span class="divider">/</span></li>
+            <li class="active">{$keyword}</li>
+        </ul>
+    </div><!--/container-->
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+
+<!--=== Content Part ===-->
+<div class="container"> 	
+	<div class="row-fluid"> 
+        <div id="w"> 
+            <ul class="thumbnails activity ulc">
+                <if condition="$search">
+                <volist name="search" id="row">
+                <if condition="$row['search_type'] eq 'active'">
+                <li class="span3" link="{:U('Active/detail',array('id'=>$row['id']))}">
+                <elseif condition="$row['search_type'] eq 'history'"/>
+                <li class="span3" link="{:U('StreetHistory/detail',array('id'=>$row['id']))}">
+                <elseif condition="$row['search_type'] eq 'posts'"/>
+                <li class="span3" link="{:U('Posts/detail',array('id'=>$row['id']))}">
+                <elseif condition="$row['search_type'] eq 'shop'"/>
+                <li class="span3" link="{:U('Shop/detail',array('id'=>$row['id']))}">
+                </if>
+            		<div class="thumbnail-style thumbnail-kenburn">
+            			<div class="thumbnail-img">
+            				<div class="overflow-hidden imgsize"><img src="{$row['cover']}" alt="" /></div>
+            								
+            			</div>
+            			<h3 style=" white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
+                            <if condition="$row['search_type'] eq 'active'">
+                            <a class="hover-effect" href="{:U('Active/detail',array('id'=>$row['id']))}" title="{$row['title']}">{$row['title']}
+                            </a>
+                            <elseif condition="$row['search_type'] eq 'history'"/>
+                            <a class="hover-effect" href="{:U('StreetHistory/detail',array('id'=>$row['id']))}" title="{$row['title']}">{$row['title']}
+                            </a>
+                            <elseif condition="$row['search_type'] eq 'posts'"/>
+                            <a class="hover-effect" href="{:U('Posts/detail',array('id'=>$row['id']))}" title="{$row['title']}">{$row['title']}
+                            </a>
+                            <elseif condition="$row['search_type'] eq 'shop'"/>
+                            <a class="hover-effect" href="{:U('Shop/detail',array('id'=>$row['id']))}" title="{$row['title']}">{$row['title']}
+                            </a>
+                            </if>
+            				
+            			</h3>
+                        <if condition="$row['search_type'] eq 'active'">
+            			<p>類型:活動</p>
+                        <elseif condition="$row['search_type'] eq 'history'"/>
+                        <p>類型:街道歷史</p>
+                        <elseif condition="$row['search_type'] eq 'posts'"/>
+                        <p>類型:景點</p>
+                        <elseif condition="$row['search_type'] eq 'shop'"/>
+                        <p>類型:店鋪</p>
+                        </if>
+            			
+            		</div>
+            	</li>
+                </volist>
+                <else/>
+                <p style="font-size: 30px;">找不到搜索結果</p>
+                </if>
+            </ul><!--/thumbnails-->
+        </div>                
+    </div><!--/row-fluid-->         
+</div><!--/container-->	 	
+<!--=== End Content Part ===-->
+
+<!--=== Footer ===-->
+<include file="common/footer" />
